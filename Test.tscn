@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://1vu5y7jaa8jt"]
+
+[ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_myinc"]
+[ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_njov2"]
+
+[node name="Node2D" type="Node2D" unique_id=1509397216]
+script = ExtResource("1_myinc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=31236547]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1158661544]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_njov2")
+expand_mode = 1

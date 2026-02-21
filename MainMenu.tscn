@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cnm1fgjeoal4p"]
 
+[ext_resource type="Script" uid="uid://c27mg2240mjta" path="res://main_menu.gd" id="1_i26rj"]
+
 [node name="Control" type="Control" unique_id=1409844193]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_i26rj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=865984542]
 layout_mode = 1
@@ -80,3 +83,5 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "No"
+
+[connection signal="pressed" from="Panel/menu buttons/Button" to="." method="_on_button_pressed"]
