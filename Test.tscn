@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_myinc"]
 [ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_njov2"]
+[ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_2au82"]
 
-[node name="Node2D" type="Node2D" unique_id=1509397216]
+[node name="game_scene_1" type="Node2D" unique_id=1509397216]
 script = ExtResource("1_myinc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=31236547]
@@ -18,3 +19,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_njov2")
 expand_mode = 1
+
+[node name="notification" type="Control" parent="CanvasLayer" unique_id=1703773079]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_2au82")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/notification" unique_id=510001045]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="CanvasLayer/notification/Panel" unique_id=442212856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -11.5
+offset_right = 99.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "[Insert Name] liked that..."

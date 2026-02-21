@@ -1,10 +1,15 @@
 join John right
+[signal arg="John_liked"]
 How's it hanging my person
+update John [animation="Tada" length="2.0"]
 Hey there, it’s great to meet you! So what’s your name?
 - Yes
+	[signal arg="John_liked"]
+	update John [animation="Tada" length="2.0"]
 	I didn’t quite catch that, did you say Jess? Hi Jess!
 - No
-	What was that? Noah? Sorry, it’s a little loud in here. Good to meet you, Noah!
+	[signal arg="John_disliked"]
+	John: What was that? Noah? Sorry, it’s a little loud in here. Good to meet you, Noah!
 John: I’m [INSERT NAME HERE].
 John: So what do you do for work? Wait no don’t tell me, I wanna guess.
 John: Is it… something with animals?
@@ -33,6 +38,129 @@ John: Is it… something with animals?
 			- No
 				John: Well- Okay, that’s a little rude, isn’t it?
 		John: Anyways!
+		John: Really? That’s awesome! Sounds like a lot of fun.
 	- No
+John: Okay, what about birds? I love birds.
+- Yes
+John: Really? That's awesome!! Do you, like, get to ride them and fly around?
+- Yes
+	John: Really? I was kidding, but that's pretty cool!! Are you allowed to bring people with you?
+	- Yes
+		John: Really? That’s awesome! Sounds like a lot of fun.
+		- Yes
+			- No
+				- 
+			John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
+			John: Ah, not really the imaginative sort? That’s alright, I guess not everyone is.
+	- No
+		Oh, that makes sense. You wouldn’t want people falling off I suppose. That’d probably be a nasty lawsuit.
+- Yes
+	John: I think that would be a lot cooler than flying in a plane. Imagine how it must feel to be an eagle or something, with the wind blowing through your feathers!
+	- Yes
+		John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
+	John: I think that would be a lot cooler than flying in a plane. Imagine how it must feel to be an eagle or something, with the wind blowing through your feathers!
+	John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
 - No
-	John: Okay, what about birds? I love birds.
+John: Okay, what about birds? I love birds.
+- Yes
+	John: Really? That's awesome!! Do you, like, get to ride them and fly around?
+	- Yes
+		John: Really? I was kidding, but that's pretty cool!! Are you allowed to bring people with you?
+		- Yes
+			John: Really? That’s awesome! Sounds like a lot of fun.
+			- Yes
+				- No
+					- 
+				John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
+				John: Ah, not really the imaginative sort? That’s alright, I guess not everyone is.
+		- No
+			Oh, that makes sense. You wouldn’t want people falling off I suppose. That’d probably be a nasty lawsuit.
+	- Yes
+		John: I think that would be a lot cooler than flying in a plane. Imagine how it must feel to be an eagle or something, with the wind blowing through your feathers!
+		- Yes
+			John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
+- No
+John: Hmm, do you work with machines?
+- Yes
+	John: Ok, I’m getting there! Are you a car person?
+	- Yes
+		John: Right on! Are you like a mechanic or something?
+		- Yes
+			John: Ok, that seems like an interesting job. Do you have a favorite kind of car to work on?
+			- Yes
+				John: Oh yeah?
+				John: …
+				John: It’s alright, you don’t have to tell me what it is if you don’t want.
+			- No
+				John: Ok, just an all-around car enjoyer, I can respect that. Seems like it’s some good honest work.
+				John: Yeah, and I bet it makes good money too.
+				John: I’ll be honest, I don’t really know much about what mechanics actually do.
+		- No
+			John: Are you like, a race car driver? I’ll assume you are. If you work with cars and aren’t a mechanic, I don’t know what other options there are. Have you won any races?
+			- Yes
+				John: Oh wow, that’s awesome! That sounds exhilarating. I bet it’s a lot of fun!
+			- No
+				John: Well that’s okay, I’m sure you will someday! I know it can be pretty competitive. Seems like it’d be fun regardless of whether you win or lose.
+	- No
+		John: Oh okay, some other kind of machine then. Is it robots?
+		- Yes
+			John: Ohh interesting. Y’know I’ve been hearing about robots and AI in the news lately. Do you think they’re ever gonna turn evil like they do in the movies?
+			- Yes
+				John: Oh man! Well that’s scary to think about! I guess that’s probably your job, is to make sure that doesn’t happen?
+				- Yes
+					John: It’s reassuring to know that there are people like you out there that try to keep the machines safe. I wouldn’t want the Terminator showing up at my door!
+				- No
+					John: Oh— Wait so you mean you want the robots to take over? That seems like it would be really bad!
+					John: Y’know, can we talk about something else? I don’t like thinking about robot apocalypses.
+			- No
+				John: No you right, of course they wouldn’t. They’re just machines, they just do what we tell them. Pretty crazy that we can make things like that though!
+				John: Technology sure has come a long way.
+				- Yes
+					John: I wonder what technology will look like 10 years from now, I guess we’ll find out!
+				- No
+					John: You don’t think so? I suppose that for how much things have changed, a whole lot really has just stayed the same, huh?
+		- No
+			Ah, well whatever it is, I’m sure it’s exciting. I don’t know, I’ve never really been interested in machines that much.
+- No
+	John: Hmm, are you… an artist?
+	- Yes
+		John: Okay, now that’s fun! Art is really cool!
+		John: Though, please tell me you’re not a film person… Y’know what, don’t answer that, I don’t want to know.
+	- No
+		John: A doctor?
+		- Yes
+			John: Oh really? That’s impressive! I bet it feels good to be able to help so many people.
+			John: Though maybe don’t order the apple cider! I’m just kidding haha!
+		- No
+			John: Are you a chef?
+			- Yes
+				John: I bet you make really good food! Why are you out here and not back in the kitchen making something?
+				John: …
+				I’m just messing with you! Besides, the food here is already really good too.
+			- No
+				John: You’re not like a psychologist or something?
+				- Yes
+					John: Oh… really? Psychologists freak me out. I always feel like they’re gonna read my mind or something.
+					John: Quick, what number am I thinking of? Ha, you don’t have to answer that.
+				- No
+					John: Okay well I’m stumped. You do have a job, don’t you?
+					- Yes
+						John: Ok, you had me worried there! Not that there’s anything wrong with being unemployed or anything.
+						John: You don’t have to tell me what your job is though.
+					- No
+						John: Oh! Okay, well, that’s fine. I know it can be hard to find a job.
+						I just hope you don’t expect me to pay for everything…!
+John: Anyway!
+John: Aren’t you going to ask me what I do?
+- Yes
+	John: Well it’s really not all that interesting. Just like, numbers and stuff.
+	John: Y’know, data. Spreadsheets. Though I’d say I'm pretty good at it! You might even say I Excel at it! Hehe.
+	John: In fact, I’m actually up for a promotion! Do you think I’ll get it?? I really hope I do.
+	- Yes
+		John: Well thank you! I’m feeling pretty good about it too. I’d definitely be a big step up for me.
+	- No
+		John: Well. Thanks for the vote of confidence. I guess.
+		John: …
+- No
+	John: Oh… Okay then. Moving on I guess.
+[signal arg="like"]

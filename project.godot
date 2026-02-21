@@ -27,7 +27,8 @@ directories/dch_directory={
 "John": "res://assets/dialogue/John.dch"
 }
 directories/dtl_directory={
-"Dialogue": "res://assets/dialogue/Dialogue.dtl"
+"Dialogue": "res://assets/dialogue/Dialogue.dtl",
+"Dialogue Intro": "res://Dialogue Intro.dtl"
 }
 layout/style_directory={
 "": "res://Test.tres",
