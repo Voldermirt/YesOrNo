@@ -1,69 +1,91 @@
 join Waiter leftmost
 Waiter: Har har har, what fine foods are ye ready to order?
 - Yes
+    [signal arg="choice_yes"]
     join John rightmost
     John: I’ll have the shrimp fettuccine, sloppy style
     leave John
     Waiter: Aye aye madam, but of course. And for you?
     
-    - Yes
+    - Yes 
+        [signal arg="choice_yes"]
         Waiter: Yes?
         - Yes
+            [signal arg="choice_yes"]
             Waiter: Qui?
             - Yes
+                [signal arg="choice_yes"]
                 Waiter: Uhhhh… do you need more time?
                 - Yes
+                    [signal arg="choice_yes"]
                     Waiter: Pardon me! I’ll give ye some more time to decide.
                 - No
                     Waiter: Well, what will ye have?
                     - Yes
+                        [signal arg="choice_yes"]
                         …
                         …
                         …
                         Waiter: One shrimp fettuccine for the madam, and one eau de salive for you.
                     - No
+                        [signal arg="choice_no"]
                         …
                         …
                         …
                         Waiter: One shrimp fettuccine for the madam, and one gazon fraîchement coupé for you.
             - No
+                [signal arg="choice_no"]
                 Waiter: Will that be all?
                 - Yes
+                    [signal arg="choice_yes"]
                     …
                 - No
+                    [signal arg="choice_no"]
                     …
                     …
                     …
                     Waiter: Great! Your meals will be out shortly.
         - No
+            [signal arg="choice_no"]
             Waiter: Pardon?
             - Yes
+                [signal arg="choice_yes"]
                 Waiter: Yes-no-yes, what do you need, mon ami?
                 - Yes
+                    [signal arg="choice_yes"]
                     Waiter: Please just tell me what you would like to order. I’m begging you, on my mother’s life.
                 - No
+                    [signal arg="choice_no"]
                     Waiter: Yes, no, then yes again. Do you say anything other than those two words?
                     - Yes
+                        [signal arg="choice_yes"]
                         Waiter: Well, let’s hear them.
                         - Yes
+                            [signal arg="choice_yes"]
                             …
                             …
                             …
                             Waiter: Very funny, mon ami.
                         - No
+                            [signal arg="choice_no"]
                             …
                             …
                             Waiter: Very well then, mon ami. But you must order something.
                     - No
+                        [signal arg="choice_no"]
                         Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
             - No
+                [signal arg="choice_no"]
                 Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
     - No
+        [signal arg="choice_no"]        
         Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
 
 - No
     Waiter: …
     - Yes
+        [signal arg="choice_yes"]
         Waiter: …
     - No
+        [signal arg="choice_no"]
         Waiter: …

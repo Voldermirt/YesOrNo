@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_myinc"]
 [ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_njov2"]
 [ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_2au82"]
+[ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/399629__soundsforhim__no-3.mp3" id="4_aq4fw"]
+[ext_resource type="AudioStream" uid="uid://3t3vwhkycovx" path="res://assets/sound/591283__awchacon__yes.wav" id="5_ivycn"]
 
 [node name="game_scene_1" type="Node2D" unique_id=1509397216]
 script = ExtResource("1_myinc")
@@ -46,3 +48,9 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "[Insert Name] liked that..."
+
+[node name="NoSounds" type="AudioStreamPlayer" parent="." unique_id=616751359]
+stream = ExtResource("4_aq4fw")
+
+[node name="YesSounds" type="AudioStreamPlayer" parent="." unique_id=788282930]
+stream = ExtResource("5_ivycn")
