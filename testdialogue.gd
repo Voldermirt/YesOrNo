@@ -5,6 +5,7 @@ extends Node2D
 @onready var yes_player: AudioStreamPlayer = $YesSounds
 @onready var no_player: AudioStreamPlayer = $NoSounds
 var timeline_name = ""
+var play_yes: bool = false
 
 var yes_clips: Array[AudioStream] = []
 var no_clips: Array[AudioStream] = []
@@ -29,10 +30,21 @@ func _ready():
 	timeline_name = 'get name'
 	Dialogic.start('get name')
 
+func _play_yes() -> void:
+	while play_yes:
+		yes_player.stream = yes_clips.pick_random()
+		yes_player.play()
+		var length = yes_player.stream.get_length()
+		var pause = randi_range(1, 2)
+		await get_tree().create_timer(length + pause).timeout
+		
 func _on_dialogic_signal(argument):
 	if argument == "choice_yes":
 		yes_player.stream = yes_clips.pick_random()
 		yes_player.play()
+		if not play_yes:
+			play_yes = true
+			_play_yes()
 	elif argument == "choice_no":
 		no_player.stream = no_clips.pick_random()
 		no_player.play()

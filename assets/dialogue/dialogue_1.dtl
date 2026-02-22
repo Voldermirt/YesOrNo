@@ -5,6 +5,7 @@ John: How's it hanging, my person?
 John: Hey there, it’s great to meet you! So what’s your name?
 
 - Yes
+    [signal arg="choice_yes"]
     [signal arg="John_liked"]
     update John [animation="Tada" length="2.0"]
     John: I didn’t quite catch that, did you say Jess? Hi Jess!
