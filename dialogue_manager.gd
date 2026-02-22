@@ -114,6 +114,9 @@ func _on_timeline_ended() -> void:
 		Dialogic.start("dialogue 1")
 		timeline_name = 'dialogue 1'
 	elif timeline_name == 'dialogue 1':
+		Dialogic.start("dialogue_where_you_from")
+		timeline_name = 'dialogue_where_you_from'
+	elif timeline_name == 'dialogue_where_you_from':
 		Dialogic.start("dialogue waiter 2")
 		timeline_name = 'dialogue waiter 2'
 	elif timeline_name == 'dialogue waiter 2':
