@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bq6iq0drxfxrn"]
+[gd_scene format=3 uid="uid://bvvgdfb7ln6i4"]
 
 [ext_resource type="Script" uid="uid://vv4hhy6bjop3" path="res://scenes/ending.gd" id="1_fyrdv"]
 [ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="1_mqjok"]
