@@ -32,6 +32,8 @@ directories/dtl_directory={
 "Dialogue": "res://assets/dialogue/Dialogue.dtl",
 "dialogue 1": "res://assets/dialogue/dialogue_1.dtl",
 "dialogue 2": "res://assets/dialogue/diaogue_2.dtl",
+"dialogue dislike": "res://assets/dialogue/dialogue dislike.dtl",
+"dialogue like": "res://assets/dialogue/dialogue like.dtl",
 "dialogue waiter 2": "res://assets/dialogue/dialogue_waiter_2.dtl",
 "get name": "res://assets/dialogue/get name.dtl"
 }

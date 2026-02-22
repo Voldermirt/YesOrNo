@@ -59,11 +59,18 @@ func _update_name_display(change: String):
 func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		Dialogic.start("dialogue 1")
-		timeline_name = 'dialogue waiter 1'
+		timeline_name = 'dialogue 1'
 		playername.visible = false
 	elif timeline_name == 'dialogue 1':
 		Dialogic.start("dialogue waiter 2")
 		timeline_name = 'dialogue waiter 2'
+	elif timeline_name == 'dialogue waiter 2':
+		if (GameManager.likeness > 10):
+			Dialogic.start("dialogue like")
+			timeline_name = 'dialogue like'
+		else:
+			Dialogic.start("dialogue dislike")
+			timeline_name = 'dialogue dislike'
 
 func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
