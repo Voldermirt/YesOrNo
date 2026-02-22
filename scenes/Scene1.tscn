@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cb0jfnpdq22mq"]
 
-[ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_udng6"]
+[ext_resource type="Script" uid="uid://ddbho5mbldxru" path="res://dialogue_manager.gd" id="1_udng6"]
 [ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_5dv5l"]
 [ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_fw15f"]
 [ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/no_sound1.mp3" id="4_agnij"]
@@ -21,6 +21,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_5dv5l")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="notification" type="Control" parent="GUI" unique_id=1703773079]
 layout_mode = 3

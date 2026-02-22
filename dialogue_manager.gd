@@ -94,8 +94,13 @@ func _update_name_display(change: String):
 func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
-		Dialogic.start("dialogue oh no")
-		timeline_name = 'dialogue oh no'
+		var n = randi() % 12
+		if (n < 10):
+			Dialogic.start("dialogue 1")
+			timeline_name = 'dialogue 1'
+		else:
+			Dialogic.start("dialogue oh no")
+			timeline_name = 'dialogue oh no'
 		playername.visible = false
 	elif timeline_name == 'dialogue oh no':
 		Dialogic.start("dialogue 1")
@@ -110,6 +115,9 @@ func _on_timeline_ended() -> void:
 		else:
 			Dialogic.start("dialogue dislike")
 			timeline_name = 'dialogue dislike'
+	else:
+		GameManager.goto_scene("res://scenes/ending.tscn")
+		return
 
 func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
