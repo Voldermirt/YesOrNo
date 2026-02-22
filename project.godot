@@ -24,7 +24,6 @@ GameManager="*uid://cfsrm25i5auag"
 [dialogic]
 
 directories/dch_directory={
-"Jake": "res://assets/dialogue/Jake.dch",
 "John": "res://assets/dialogue/John.dch",
 "Waiter": "res://assets/dialogue/Waiter.dch"
 }
@@ -37,10 +36,7 @@ directories/dtl_directory={
 "dialogue waiter 2": "res://assets/dialogue/dialogue_waiter_2.dtl",
 "get name": "res://assets/dialogue/get name.dtl"
 }
-layout/style_directory={
-"": "res://Test.tres",
-"Test": "res://Test.tres"
-}
+layout/style_directory={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

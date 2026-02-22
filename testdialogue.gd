@@ -6,6 +6,7 @@ extends Node2D
 @onready var no_player: AudioStreamPlayer = $NoSounds
 var timeline_name = ""
 var play_yes: bool = false
+var name_pronounce: Array
 
 var yes_clips: Array[AudioStream] = []
 var no_clips: Array[AudioStream] = []
@@ -42,22 +43,35 @@ func _on_dialogic_signal(argument):
 	if argument == "choice_yes":
 		yes_player.stream = yes_clips.pick_random()
 		yes_player.play()
-		if not play_yes:
-			play_yes = true
-			_play_yes()
+		#if not play_yes:
+			#play_yes = true
+			#_play_yes()
 	elif argument == "choice_no":
 		no_player.stream = no_clips.pick_random()
 		no_player.play()
 	match argument:
 		"name change yes":
+			name_pronounce.append(1)
 			_update_name_display("yes")
 		"name change no":
+			name_pronounce.append(2)
 			_update_name_display("no")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
+func _say_name() -> void:
+	for e in name_pronounce:
+		if e == 1:
+			yes_player.stream = yes_clips.pick_random()
+			yes_player.play()
+			await yes_player.finished
+		elif e == 2:
+			no_player.stream = no_clips.pick_random()
+			no_player.play()
+			await no_player.finished
+	
 func _update_name_display(change: String):
 	GameManager.playername += change
 	#playername.Panel.Label.text = str(GameManager.playername)
@@ -70,6 +84,7 @@ func _update_name_display(change: String):
 
 func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
+		_say_name()
 		Dialogic.start("dialogue 1")
 		timeline_name = 'dialogue 1'
 		playername.visible = false
