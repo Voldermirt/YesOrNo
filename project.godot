@@ -24,11 +24,13 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 directories/dch_directory={
 "Jake": "res://assets/dialogue/Jake.dch",
-"John": "res://assets/dialogue/John.dch"
+"John": "res://assets/dialogue/John.dch",
+"Waiter": "res://Waiter.dch"
 }
 directories/dtl_directory={
 "Dialogue": "res://assets/dialogue/Dialogue.dtl",
-"Dialogue Intro": "res://Dialogue Intro.dtl"
+"Dialogue Intro": "res://Dialogue Intro.dtl",
+"Dialogue Waiter": "res://Dialogue Waiter.dtl"
 }
 layout/style_directory={
 "": "res://Test.tres",

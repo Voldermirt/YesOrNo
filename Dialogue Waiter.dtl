@@ -1,0 +1,69 @@
+join Waiter leftmost
+Waiter: Har har har, what fine foods are ye ready to order?
+- Yes
+    join John rightmost
+    John: I’ll have the shrimp fettuccine, sloppy style
+    leave John
+    Waiter: Aye aye madam, but of course. And for you?
+    
+    - Yes
+        Waiter: Yes?
+        - Yes
+            Waiter: Qui?
+            - Yes
+                Waiter: Uhhhh… do you need more time?
+                - Yes
+                    Waiter: Pardon me! I’ll give ye some more time to decide.
+                - No
+                    Waiter: Well, what will ye have?
+                    - Yes
+                        …
+                        …
+                        …
+                        Waiter: One shrimp fettuccine for the madam, and one eau de salive for you.
+                    - No
+                        …
+                        …
+                        …
+                        Waiter: One shrimp fettuccine for the madam, and one gazon fraîchement coupé for you.
+            - No
+                Waiter: Will that be all?
+                - Yes
+                    …
+                - No
+                    …
+                    …
+                    …
+                    Waiter: Great! Your meals will be out shortly.
+        - No
+            Waiter: Pardon?
+            - Yes
+                Waiter: Yes-no-yes, what do you need, mon ami?
+                - Yes
+                    Waiter: Please just tell me what you would like to order. I’m begging you, on my mother’s life.
+                - No
+                    Waiter: Yes, no, then yes again. Do you say anything other than those two words?
+                    - Yes
+                        Waiter: Well, let’s hear them.
+                        - Yes
+                            …
+                            …
+                            …
+                            Waiter: Very funny, mon ami.
+                        - No
+                            …
+                            …
+                            Waiter: Very well then, mon ami. But you must order something.
+                    - No
+                        Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
+            - No
+                Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
+    - No
+        Waiter: Sacre bleu! Never have I heard such disrespect on my mother’s name.
+
+- No
+    Waiter: …
+    - Yes
+        Waiter: …
+    - No
+        Waiter: …
