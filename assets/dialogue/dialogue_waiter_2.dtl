@@ -1,38 +1,51 @@
 join Waiter left
 Waiter: Bonjour, are you two ready to order?
 - Yes
+	[signal arg="choice_yes"]
 	Waiter: Excellent. What are we feeling today?
 	John: I’ll have the Fettuccine Alfredo, please.
 	Waiter: Great choice. And for you?
 	- Yes
+		[signal arg="choice_yes"]
 		label ONE
 		Waiter: Yes, what will you be having?
 		- Yes
+			[signal arg="choice_yes"]
 			label FOUR
 			Waiter: Would you like to hear the specials?
 			- Yes
+				[signal arg="choice_yes"]
 				Waiter: We have the risotto…
 				- Yes
+					[signal arg="choice_yes"]
 					Waiter: Great, I’ll be back soon with some risotto and fettuccine alfredo.
 					leave Waiter
 				- No
+					[signal arg="choice_no"]
 					Waiter: …salmon ravioli…
 					- Yes
+						[signal arg="choice_yes"]
 						Waiter: Great, I’ll be back soon with that ravioli and the fettuccine alfredo.
 						leave Waiter
 					- No
+						[signal arg="choice_no"]
 						Waiter: …and the chicken parmesan.
 						- Yes
+							[signal arg="choice_yes"]
 							Waiter: Excellent, I’ll be back soon with that chicken parmesan and the fettuccine alfredo.
 							leave Waiter
 						- No
+							[signal arg="choice_no"]
 							jump THREE
 			- No
+				[signal arg="choice_no"]
 				label THREE
 				Waiter: Alright, well what would you like?
 				- Yes
+					[signal arg="choice_yes"]
 					jump No1
 				- No
+					[signal arg="choice_no"]
 					label No1
 					Waiter: I’m afraid I don’t understand.
 					John: Sorry, they’ll just have the lasagna.
@@ -40,28 +53,37 @@ Waiter: Bonjour, are you two ready to order?
 					leave Waiter
 					John: (What are you doing??)
 		- No
+			[signal arg="choice_no"]
 			Waiter: Pardon?
 			- Yes
+				[signal arg="choice_yes"]
 				jump FOUR
 			- No
+				[signal arg="choice_no"]
 				jump FIVE
 	- No
+		[signal arg="choice_no"]
 		Waiter: Pardon?
 		- Yes
+			[signal arg="choice_yes"]
 			jump ONE
 		- No
+			[signal arg="choice_no"]
 			label FIVE
 			Waiter: Nothing for you? … As you wish.
 			Waiter: I’ll be back soon with that fettuccine alfredo.
 			leave Waiter
 			John: You’re not eating anything?
 			- Yes
+				[signal arg="choice_yes"]
 				label TWO
 				John: Alright, suit yourself.
 				John: (Then why did you suggest we go to a restaurant?)
 			- No
+				[signal arg="choice_no"]
 				John: We can get some breadsticks for the table…?
 				- Yes
+					[signal arg="choice_yes"]
 					John: A-alright then? Waiter!
 					join Waiter center
 					Waiter: You called?
@@ -69,7 +91,9 @@ Waiter: Bonjour, are you two ready to order?
 					Waiter: Of course.
 					leave Waiter
 				- No
+					[signal arg="choice_no"]
 					jump TWO
 - No
+	[signal arg="choice_no"]
 	Waiter: I’ll give you another moment, then.
 	leave Waiter

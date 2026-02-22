@@ -30,8 +30,9 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Dialogue": "res://assets/dialogue/Dialogue.dtl",
-"dialogue 1": "res://dialogue_1.dtl",
-"dialogue 2": "res://diaogue_2.dtl"
+"dialogue 1": "res://assets/dialogue/dialogue_1.dtl",
+"dialogue 2": "res://assets/dialogue/diaogue_2.dtl",
+"dialogue waiter 2": "res://assets/dialogue/dialogue_waiter_2.dtl"
 }
 layout/style_directory={
 "": "res://Test.tres",

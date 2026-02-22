@@ -39,12 +39,13 @@ func _process(delta: float) -> void:
 
 func _on_timeline_ended():
 	notification._on_notification(str(GameManager.likeness) + " likeness score");
-	Dialogic.start("dialogue 2")
+	Dialogic.start("dialogue waiter 2")
+	
 
 func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 	
 	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
-		Dialogic.start('dialogue 1')
+		Dialogic.start('dialogue waiter 2')
 		get_viewport().set_input_as_handled()
