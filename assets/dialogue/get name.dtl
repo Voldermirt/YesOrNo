@@ -1,0 +1,8 @@
+What is your name?
+- Yes
+	[signal arg="name change yes"]
+	jump 
+- No
+	[signal arg="name change no"]
+	jump 
+- Yes No

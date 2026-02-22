@@ -2,7 +2,7 @@ extends Node
 
 var current_scene = null
 @onready var likeness = 0;
-@onready var playername: String = ""
+var playername: String = ""
 @onready var last_timeline: String = ""
 
 func _ready() -> void:
