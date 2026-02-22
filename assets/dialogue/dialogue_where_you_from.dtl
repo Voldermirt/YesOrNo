@@ -1,0 +1,134 @@
+John: So, are you from around here?
+- Yes
+	[signal arg="choice_yes"]
+	John: Oh cool, have you lived here long?
+	- Yes
+		[signal arg="choice_yes"]
+		John: Nice, do you like it here?
+		- Yes
+			[signal arg="choice_yes"]
+			John: Me too!
+		- No
+			[signal arg="choice_no"]
+			John: Oh man, I'm sorry to hear that!
+	- No
+		[signal arg="choice_no"]
+		John: Oh, so you’re new here? Maybe I can show you the sights sometime.
+		- Yes
+			[signal arg="choice_yes"]
+			John: Well I don’t want to commit to anything just now, but it could be fun!
+		- No
+			[signal arg="choice_no"]
+			John: Okay, well I just figured I’d float the idea.
+
+- No
+	[signal arg="choice_no"]
+	John: Oh, are you from very far away?
+	- Yes
+		[signal arg="choice_yes"]
+		John: Hmm... Lemme see if I can guess.
+		John: Is English your first language?
+		- Yes
+			[signal arg="choice_yes"]
+			John: Are you from Britain?
+			- Yes
+				[signal arg="choice_yes"]
+				John: I bet you bloody are. You want your bo’uh o’ wa’uh, innit?
+			- No
+				[signal arg="choice_no"]
+				John: From Canada?
+				- Yes
+					[signal arg="choice_yes"]
+					John: Oh okay, that’s cool! I’ve always wanted to visit there.
+				- No
+					[signal arg="choice_no"]
+					John: Australia?
+					- Yes
+						[signal arg="choice_yes"]
+						John: Oh wow. Do you really get huuuge spiders down there?
+						- Yes
+							[signal arg="choice_yes"]
+							John: Yeesh! I could never live there, I think.
+						- No
+							[signal arg="choice_no"]
+							John: Riiiiight, whatever you say…
+					- No
+						[signal arg="choice_no"]
+						John: Hmm. I’m not sure where else it could be! How mysterious.
+		- No
+			[signal arg="choice_no"]
+			John: Spanish?
+			- Sí
+				[signal arg="choice_yes"]
+				John: Are you from Mexico?
+				- Sí
+					[signal arg="choice_yes"]
+					John: Ok, well that's not like *that* far, I guess.
+				- No
+					[signal arg="choice_no"]
+					Johm: Colombia?
+					- Sí
+						[signal arg="choice_yes"]
+						John: Oh interesting! What's it like there?
+						- Sí
+							[signal arg="choice_yes"]
+							John: Right on.
+						- No
+							[signal arg="choice_no"]
+							John: Oh okay. Sorry for asking.
+					- No
+						[signal arg="choice_no"]
+						John: Spain?
+						- Sí
+							[signal arg="choice_yes"]
+							John: NOBODY EXPECTS THE SPANISH INQUISITION!!!
+							# TODO: Spanish Inquisition
+						- No
+							[signal arg="choice_no"]
+							John: Hmm, I'm not sure then!
+			- No
+				[signal arg="choice_no"]
+				John: French?
+				- Oui
+					[signal arg="choice_yes"]
+					John: Are you from France?
+					- Oui
+						[signal arg="choice_yes"]
+						John: Oh, yikes. I'm sorry, I'm just not sure I want to date a French person.
+						# TODO: Game Over
+					- Non
+						[signal arg="choice_no"]
+						John: Canada?
+						- Oui
+							[signal arg="choice_yes"]
+							John: Oh, so you're like Wolverine!
+						- Non
+							[signal arg="choice_no"]
+							John: Belgium?
+							- Oui
+								[signal arg="choice_yes"]
+								John: Y'all, uh, make good waffles.
+							- Non
+								[signal arg="choice_no"]
+								John: Well I’m not sure then, but that’s cool I guess. French-speaking person of unknown origin.
+				- Non
+					[signal arg="choice_no"]
+					John: Well then. Uhh, I'm not sure.
+					John: You must be from, like, Atlantis or something. Ha!
+					
+	- No
+		[signal arg="choice_no"]
+		John: Ok, so from somewhat nearby, then.
+		John: What made you decide to come here?
+		- Yes
+			[signal arg="choice_yes"]
+			John: Say again?
+			- Yes
+				[signal arg="choice_yes"]
+				John: Uh— Okay! That’s cool, I suppose.
+			- No
+				[signal arg="choice_no"]
+				John: Huh? Sorry, it's still kinda loud in here. Anyway!
+		- No
+			[signal arg="choice_no"]
+			John: What? Oh, sorry for asking, I guess. You don't have to answer that.
