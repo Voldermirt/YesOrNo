@@ -1,4 +1,4 @@
-join John center
+join John center [animation="Slide From Right"]
 [signal arg="John_liked"]
 update John [animation="Tada" length="2.0"]
 John: How's it hanging, my person?
@@ -217,4 +217,4 @@ John: Anyway! Aren’t you going to ask me what I do?
 - No
     [signal arg="choice_no"]
     John: Oh… okay then. Moving on.
-[signal arg="like"]
+set

@@ -1,4 +1,4 @@
-join John center
+join John center [animation="Instant In" length="0.0"]
 John: So, are you from around here?
 - Yes
 	update John (happy) [animation="Tada"]

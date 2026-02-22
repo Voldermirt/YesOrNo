@@ -1,4 +1,5 @@
-join Waiter left
+join Waiter left [animation="Slide From Left"]
+join John center [animation="Instant In" length="0.0"]
 Waiter: Bonjour, are you two ready to order?
 - Yes
 	[signal arg="choice_yes"]
@@ -19,21 +20,21 @@ Waiter: Bonjour, are you two ready to order?
 				- Yes
 					[signal arg="choice_yes"]
 					Waiter: Great, I’ll be back soon with some risotto and fettuccine alfredo.
-					leave Waiter
+					leave Waiter [animation="Slide To Left"]
 				- No
 					[signal arg="choice_no"]
 					Waiter: …salmon ravioli…
 					- Yes
 						[signal arg="choice_yes"]
 						Waiter: Great, I’ll be back soon with that ravioli and the fettuccine alfredo.
-						leave Waiter
+						leave Waiter [animation="Slide To Left"]
 					- No
 						[signal arg="choice_no"]
 						Waiter: …and the chicken parmesan.
 						- Yes
 							[signal arg="choice_yes"]
 							Waiter: Excellent, I’ll be back soon with that chicken parmesan and the fettuccine alfredo.
-							leave Waiter
+							leave Waiter [animation="Slide To Left"]
 						- No
 							[signal arg="choice_no"]
 							jump THREE
@@ -50,7 +51,7 @@ Waiter: Bonjour, are you two ready to order?
 					Waiter: I’m afraid I don’t understand.
 					John: Sorry, they’ll just have the lasagna.
 					Waiter: ...Very well. I’ll be back shortly with that lasagna and the fettuccine alfredo.
-					leave Waiter
+					leave Waiter [animation="Slide To Left"]
 					John: (What are you doing??)
 		- No
 			[signal arg="choice_no"]
@@ -72,7 +73,7 @@ Waiter: Bonjour, are you two ready to order?
 			label FIVE
 			Waiter: Nothing for you? … As you wish.
 			Waiter: I’ll be back soon with that fettuccine alfredo.
-			leave Waiter
+			leave Waiter [animation="Slide To Left"]
 			John: You’re not eating anything?
 			- Yes
 				[signal arg="choice_yes"]
@@ -85,7 +86,7 @@ Waiter: Bonjour, are you two ready to order?
 				- Yes
 					[signal arg="choice_yes"]
 					John: A-alright then? Waiter!
-					join Waiter center
+					join Waiter center [animation="Slide From Left"]
 					Waiter: You called?
 					John: Hi, could we also get some breadsticks for the table please?
 					Waiter: Of course.
