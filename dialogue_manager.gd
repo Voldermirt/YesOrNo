@@ -1,17 +1,23 @@
 extends Node2D
 
 @onready var notification: Control = $GUI/notification
-@onready var playername: Control = $GUI/name
+@onready var player_name: Control = $GUI/name
 @onready var yes_player: AudioStreamPlayer = $YesSounds
 @onready var no_player: AudioStreamPlayer = $NoSounds
-var timeline_name = ""
+
+const MAX_NAME_COUNT: int = 8
+const PRONOUNCE_YES := 1
+const PRONOUNCE_NO := 2
+
+var timeline_name: String = ""
 var play_yes: bool = false
-var name_pronounce: Array
-var name_count = 0
-var oh_no = preload("res://assets/sound/no_oh_no.mp3")
+var name_pronounce: Array = []
+var name_count: int = 0
+var oh_no: AudioStream = preload("res://assets/sound/no_oh_no.mp3")
 
 var yes_clips: Array[AudioStream] = []
 var no_clips: Array[AudioStream] = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -45,28 +51,30 @@ func _play_yes() -> void:
 		var pause = randi_range(1, 2)
 		await get_tree().create_timer(length + pause).timeout
 		
-func _on_dialogic_signal(argument):
-	if argument == "choice_yes":
-		yes_player.stream = yes_clips.pick_random()
-		yes_player.play()
-		#if not play_yes:
-			#play_yes = true
-			#_play_yes()
-	elif argument == "choice_no":
-		no_player.stream = no_clips.pick_random()
-		no_player.play()
+
+func _play_stream(player: AudioStreamPlayer, stream: AudioStream, await_finish: bool=false) -> void:
+	player.stream = stream
+	player.play()
+	if await_finish:
+		await player.finished
+
+
+func _on_dialogic_signal(argument: String) -> void:
 	match argument:
+		"choice_yes":
+			_play_stream(yes_player, yes_clips.pick_random())
+		"choice_no":
+			_play_stream(no_player, no_clips.pick_random())
 		"name change yes":
-			if name_count < 8:
-				name_pronounce.append(1)
+			if name_count < MAX_NAME_COUNT:
+				name_pronounce.append(PRONOUNCE_YES)
 				_update_name_display("yes")
 		"name change no":
-			if name_count < 8:
-				name_pronounce.append(2)
+			if name_count < MAX_NAME_COUNT:
+				name_pronounce.append(PRONOUNCE_NO)
 				_update_name_display("no")
 		"oh_no":
-			yes_player.stream = oh_no
-			yes_player.play()
+			_play_stream(yes_player, oh_no)
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -75,21 +83,16 @@ func _process(delta: float) -> void:
 
 func _say_name() -> void:
 	for e in name_pronounce:
-		if e == 1:
-			yes_player.stream = yes_clips.pick_random()
-			yes_player.play()
-			await yes_player.finished
-		elif e == 2:
-			no_player.stream = no_clips.pick_random()
-			no_player.play()
-			await no_player.finished
+		if e == PRONOUNCE_YES:
+			_play_stream(yes_player, yes_clips.pick_random(), true)
+		elif e == PRONOUNCE_NO:
+			_play_stream(no_player, no_clips.pick_random(), true)
 	
-func _update_name_display(change: String):
-	if name_count < 8:
+func _update_name_display(change: String) -> void:
+	if name_count < MAX_NAME_COUNT:
 		name_count += 1
 		GameManager.playername += change
-		#playername.Panel.Label.text = str(GameManager.playername)
-		var label = playername.get_node("Panel/Label") as Label
+		var label = player_name.get_node("Panel/Label") as Label
 		label.text = GameManager.playername
 	
 #func _on_timeline_ended():
@@ -100,13 +103,13 @@ func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
 		var n = randi() % 12
-		if (n < 10):
+		if (n < 11):
 			Dialogic.start("dialogue 1")
 			timeline_name = 'dialogue 1'
 		else:
 			Dialogic.start("dialogue oh no")
 			timeline_name = 'dialogue oh no'
-		playername.visible = false
+		player_name.visible = false
 	elif timeline_name == 'dialogue oh no':
 		Dialogic.start("dialogue 1")
 		timeline_name = 'dialogue 1'
@@ -124,8 +127,9 @@ func _on_timeline_ended() -> void:
 		GameManager.goto_scene("res://scenes/ending.tscn")
 		return
 
-func _input(event: InputEvent):
-	if name_count >= 8:
+
+func _input(event: InputEvent) -> void:
+	if name_count >= MAX_NAME_COUNT:
 		name_count -= 1
 		Dialogic.end_timeline()
 		
