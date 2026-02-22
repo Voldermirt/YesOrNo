@@ -7,6 +7,7 @@ extends Node2D
 var timeline_name = ""
 var play_yes: bool = false
 var name_pronounce: Array
+var oh_no = preload("res://assets/sound/no_oh_no.mp3")
 
 var yes_clips: Array[AudioStream] = []
 var no_clips: Array[AudioStream] = []
@@ -28,8 +29,7 @@ func _ready():
 		preload("res://assets/sound/no_sound4.mp3"),
 		preload("res://assets/sound/no_sound5.mp3"),
 		preload("res://assets/sound/no_sound6.mp3"),
-		preload("res://assets/sound/no_sound7.mp3")	
-		
+		preload("res://assets/sound/no_sound7.mp3")		
 	]
 		
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -61,6 +61,10 @@ func _on_dialogic_signal(argument):
 		"name change no":
 			name_pronounce.append(2)
 			_update_name_display("no")
+		"oh_no":
+			yes_player.stream = oh_no
+			yes_player.play()
+			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -11,6 +11,7 @@ John: You better believe it, I'm driving in my car
 [signal arg="choice_no"]
 John: Oh shit, wait hold up
 [signal arg="choice_no"]
+[signal arg="oh_no"]
 John: I shouldn't have drank that beer
 [signal arg="choice_no"]
 John: I just hit a deer
