@@ -1,3 +1,4 @@
+join John right
 John: So, are you from around here?
 - Yes
 	[signal arg="choice_yes"]
@@ -115,7 +116,7 @@ John: So, are you from around here?
 					[signal arg="choice_no"]
 					John: Well then. Uhh, I'm not sure.
 					John: You must be from, like, Atlantis or something. Ha!
-					
+	
 	- No
 		[signal arg="choice_no"]
 		John: Ok, so from somewhat nearby, then.
