@@ -123,8 +123,8 @@ func _update_name_display(change: String) -> void:
 func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
-		var n = randi() % 12
-		if (n < 1):
+		var n = randi() % 200
+		if (n < 195):
 			Dialogic.start("dialogue 1")
 			timeline_name = 'dialogue 1'
 		else:
