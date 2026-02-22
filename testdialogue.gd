@@ -24,7 +24,12 @@ func _ready():
 	no_clips = [
 		preload("res://assets/sound/no_sound1.mp3"),
 		preload("res://assets/sound/no_sound2.wav"),
-		preload("res://assets/sound/no_sound3.wav")
+		preload("res://assets/sound/no_sound3.wav"),
+		preload("res://assets/sound/no_sound4.mp3"),
+		preload("res://assets/sound/no_sound5.mp3"),
+		preload("res://assets/sound/no_sound6.mp3"),
+		preload("res://assets/sound/no_sound7.mp3")	
+		
 	]
 		
 	Dialogic.signal_event.connect(_on_dialogic_signal)
