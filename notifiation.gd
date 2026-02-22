@@ -8,12 +8,14 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument):
-	modulate.a = 1.0
-	visible = true
-	
-	if fade_tween and fade_tween.is_valid():
-		fade_tween.kill()
-		fade_tween = null
+	if argument == "John_liked" || argument == "John_disliked":
+		modulate.a = 1.0
+		visible = true
+		
+		if fade_tween and fade_tween.is_valid():
+			fade_tween.kill()
+			fade_tween = null
+
 
 	if argument == "John_liked":
 		$Panel/Label.text = "John liked that..."
