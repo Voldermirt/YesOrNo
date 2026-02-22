@@ -1,3 +1,3 @@
-join John right
+join John center
 John: I do want a second date
 [signal arg="choice_yes"]

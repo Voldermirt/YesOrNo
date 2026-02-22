@@ -1,20 +1,20 @@
-join John center
-John: I know where you live
+join bingus center
+bingus: I know where you live
 - Yes
 - No
 [signal arg="choice_no"]
-John: I'm coming to get you
+bingus: I'm coming to get you
 - Yes
 - No
 [signal arg="choice_no"]
-John: You better believe it, I'm driving in my car
+bingus: You better believe it, I'm driving in my car
 [signal arg="choice_no"]
-John: Oh shit, wait hold up
+bingus: Oh shit, wait hold up
 [signal arg="choice_no"]
 [signal arg="oh_no"]
-John: I shouldn't have drank that beer
+bingus: I shouldn't have drank that beer
 [signal arg="choice_no"]
-John: I just hit a deer
+bingus: I just hit a deer
 [signal arg="choice_no"]
-John: Let's do a rain check
+bingus: Let's do a rain check
 [signal arg="choice_no"]

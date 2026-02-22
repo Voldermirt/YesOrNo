@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://cb0jfnpdq22mq"]
 
 [ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://dialogue_manager.gd" id="1_udng6"]
-[ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_5dv5l"]
+[ext_resource type="Texture2D" uid="uid://8cxpkhhhf4wn" path="res://assets/art/backgroundgamejam1.png" id="2_5dv5l"]
+[ext_resource type="Texture2D" uid="uid://lg2fpkdxbox2" path="res://assets/art/chairgamejam.png" id="3_agnij"]
 [ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_fw15f"]
 [ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/no_sound1.mp3" id="4_agnij"]
+[ext_resource type="Texture2D" uid="uid://c58es3duhrbya" path="res://assets/art/tablegamejam.png" id="4_fw15f"]
+[ext_resource type="Texture2D" uid="uid://c7b2feuwjdhim" path="res://assets/art/platesgamejam.png" id="5_agnij"]
 [ext_resource type="AudioStream" uid="uid://3t3vwhkycovx" path="res://assets/sound/yes_sound1.wav" id="5_d2pwn"]
+[ext_resource type="Texture2D" uid="uid://6lt7giesc032" path="res://assets/art/dategamejam.png" id="6_d2pwn"]
 
 [node name="game_scene_1" type="Node2D" unique_id=1509397216]
 script = ExtResource("1_udng6")
@@ -20,8 +24,50 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_5dv5l")
-expand_mode = 1
+expand_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="Chair" type="TextureRect" parent="GUI/background" unique_id=1388682005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_agnij")
+expand_mode = 3
+
+[node name="Table" type="TextureRect" parent="GUI/background" unique_id=839087547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_fw15f")
+expand_mode = 1
+
+[node name="Plates" type="TextureRect" parent="GUI/background" unique_id=128775917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_agnij")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="GUI/background" unique_id=798816743]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_d2pwn")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="notification" type="Control" parent="GUI" unique_id=1703773079]
 layout_mode = 3

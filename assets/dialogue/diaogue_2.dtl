@@ -2,7 +2,7 @@ join Waiter leftmost
 Waiter: Har har har, what fine foods are ye ready to order?
 - Yes
     [signal arg="choice_yes"]
-    join John rightmost
+    join John center
     John: I’ll have the shrimp fettuccine, sloppy style
     leave John
     Waiter: Aye aye madam, but of course. And for you?

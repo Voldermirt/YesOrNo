@@ -1,4 +1,4 @@
-join John right
+join John center
 [signal arg="John_liked"]
 How's it hanging my person
 update John [animation="Tada" length="2.0"]

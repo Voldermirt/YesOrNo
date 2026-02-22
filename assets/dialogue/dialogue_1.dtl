@@ -1,13 +1,14 @@
-join John right
+join John center
 [signal arg="John_liked"]
 update John [animation="Tada" length="2.0"]
 John: How's it hanging, my person?
+update John (happy)
 John: Hey there, it’s great to meet you! So what’s your name?
 
 - Yes
     [signal arg="choice_yes"]
     [signal arg="John_liked"]
-    update John [animation="Tada" length="2.0"]
+    update John (nervous) [animation="Tada" length="2.0"]
     John: I didn’t quite catch that, did you say Jess? Hi Jess!
 - No
     [signal arg="choice_no"]
@@ -33,7 +34,9 @@ John: Is it… something with animals?
             - Yes
                 [signal arg="choice_yes"]
                 John: Yeah, horses are pretty cool! I used to have one when I was a kid.
+                update John (nervous)
                 John: We had to get rid of it after the incident though. I’m still on a no-fly list.
+                update John (date)
             - No
                 [signal arg="choice_no"]
                 John: Oh really? Horses are neat, but honestly a little overrated. They’re a lot of work to take care of.
@@ -51,10 +54,12 @@ John: Is it… something with animals?
                 John: Well… okay, that’s a little rude, isn’t it?
         
         John: Anyways!
+        update John (date)
         John: Really? That’s awesome! Sounds like a lot of fun.
     
     - No
         [signal arg="choice_no"]
+        update John (happy)
         John: Okay, what about birds? I love birds.
         
         - Yes

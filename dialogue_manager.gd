@@ -124,7 +124,7 @@ func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
 		var n = randi() % 12
-		if (n < 11):
+		if (n < 1):
 			Dialogic.start("dialogue 1")
 			timeline_name = 'dialogue 1'
 		else:

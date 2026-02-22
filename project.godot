@@ -25,7 +25,8 @@ GameManager="*uid://cfsrm25i5auag"
 
 directories/dch_directory={
 "John": "res://assets/dialogue/John.dch",
-"Waiter": "res://assets/dialogue/Waiter.dch"
+"Waiter": "res://assets/dialogue/Waiter.dch",
+"bingus": "res://assets/art/bingus.dch"
 }
 directories/dtl_directory={
 "Dialogue": "res://assets/dialogue/Dialogue.dtl",

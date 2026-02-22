@@ -10,20 +10,56 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Test",
+&"default_portrait": "date",
 &"description": "",
 &"display_name": "Johny",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(40, 0),
 &"portraits": {
-"Test": {
+"date": {
 "export_overrides": {
-"image": "\"res://assets/art/Drawing.png\""
+"image": "\"res://assets/art/dategamejam.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -75),
-"scale": 0.75,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+},
+"happy": {
+"export_overrides": {
+"image": "\"res://assets/art/dategamejamhappy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"mad": {
+"export_overrides": {
+"image": "\"res://assets/art/dategamejammad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervous": {
+"export_overrides": {
+"image": "\"res://assets/art/dategamejamnervous.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sad": {
+"export_overrides": {
+"image": "\"res://assets/art/dategamejamsad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
 "scene": ""
 }
 },
