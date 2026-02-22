@@ -165,8 +165,8 @@ John: Is it… something with animals?
         [signal arg="choice_no"]
         John: Hmm, are you… an artist?
 
-        - Yes
-            [signal arg="choice_yes"]
+		- Yes
+			[signal arg="choice_yes"]
 			John: Fun! Art is cool! Just don’t be a filmmaker… haha, don’t answer that.
 		- No
 			[signal arg="choice_no"]
