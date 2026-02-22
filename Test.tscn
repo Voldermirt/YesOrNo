@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1vu5y7jaa8jt"]
 
-[ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_myinc"]
+[ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://dialogue_manager.gd" id="1_myinc"]
 [ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_njov2"]
 [ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_2au82"]
 [ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/no_sound1.mp3" id="4_aq4fw"]
