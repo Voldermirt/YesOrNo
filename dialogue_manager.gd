@@ -7,6 +7,7 @@ extends Node2D
 var timeline_name = ""
 var play_yes: bool = false
 var name_pronounce: Array
+var name_count = 0
 var oh_no = preload("res://assets/sound/no_oh_no.mp3")
 
 var yes_clips: Array[AudioStream] = []
@@ -56,11 +57,13 @@ func _on_dialogic_signal(argument):
 		no_player.play()
 	match argument:
 		"name change yes":
-			name_pronounce.append(1)
-			_update_name_display("yes")
+			if name_count < 8:
+				name_pronounce.append(1)
+				_update_name_display("yes")
 		"name change no":
-			name_pronounce.append(2)
-			_update_name_display("no")
+			if name_count < 8:
+				name_pronounce.append(2)
+				_update_name_display("no")
 		"oh_no":
 			yes_player.stream = oh_no
 			yes_player.play()
@@ -82,10 +85,12 @@ func _say_name() -> void:
 			await no_player.finished
 	
 func _update_name_display(change: String):
-	GameManager.playername += change
-	#playername.Panel.Label.text = str(GameManager.playername)
-	var label = playername.get_node("Panel/Label") as Label
-	label.text = GameManager.playername
+	if name_count < 8:
+		name_count += 1
+		GameManager.playername += change
+		#playername.Panel.Label.text = str(GameManager.playername)
+		var label = playername.get_node("Panel/Label") as Label
+		label.text = GameManager.playername
 	
 #func _on_timeline_ended():
 	#notification._on_notification(str(GameManager.likeness) + " likeness score");
@@ -120,9 +125,13 @@ func _on_timeline_ended() -> void:
 		return
 
 func _input(event: InputEvent):
+	if name_count >= 8:
+		name_count -= 1
+		Dialogic.end_timeline()
+		
 	if Dialogic.current_timeline != null:
 		return
-	
+
 	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
 		Dialogic.start('dialogue 1')
 		timeline_name = 'dialogue waiter 1'
