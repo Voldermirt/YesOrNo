@@ -65,7 +65,7 @@ func _on_timeline_ended() -> void:
 		Dialogic.start("dialogue waiter 2")
 		timeline_name = 'dialogue waiter 2'
 	elif timeline_name == 'dialogue waiter 2':
-		if (GameManager.likeness > 10):
+		if (GameManager.likeness > 1):
 			Dialogic.start("dialogue like")
 			timeline_name = 'dialogue like'
 		else:
