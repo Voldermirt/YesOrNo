@@ -12,4 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Test.tscn")
+	GameManager.goto_scene("res://scenes/Scene1.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	print("swooby")
+	get_tree().quit()

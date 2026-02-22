@@ -18,52 +18,52 @@ John: Is it… something with animals?
 
 - Yes
     John: Aha, I thought so! Do you work with horses?
-
+    
     - Yes
         John: Cool! How many horses do you work with?
-
+        
         - Yes
             John: Oh wow, that many huh? Sounds like a lot of work. I bet it’s pretty rewarding though?
-
+            
             - Yes
                 John: Yeah, horses are pretty cool! I used to have one when I was a kid.
                 John: We had to get rid of it after the incident though. I’m still on a no-fly list.
             - No
                 John: Oh really? Horses are neat, but honestly a little overrated. They’re a lot of work to take care of.
-
+        
         - No
             John: Aha, you’re a jokester! A bit of horsing around (hehe).
             John: Man, I'm so funny HAHA! Wasn’t that a good one?
-
+            
             - Yes
                 John: Thanks! I was pretty proud of that one.
             - No
                 John: Well… okay, that’s a little rude, isn’t it?
-
+        
         John: Anyways!
         John: Really? That’s awesome! Sounds like a lot of fun.
-
+    
     - No
         John: Okay, what about birds? I love birds.
-
+        
         - Yes
             John: Really? That’s awesome! Do you, like, get to ride them and fly around?
-
+            
             - Yes
                 John: Haha, just kidding! That’s pretty cool though. Are you allowed to bring people with you?
-
+                
                 - Yes
                     John: Really? That sounds like a lot of fun!
                     John: Yeah, that’d be pretty cool. I’ve always kinda wanted to try skydiving. Wonder if that’s what birds feel like.
                 - No
                     John: Oh, that makes sense. You wouldn’t want people falling off—I imagine that’d be a nasty lawsuit.
-
+            
             - No
                 John: Haha, I was just kidding. Imagine flying around though—it’d be pretty cool!
-
+        
         - No
             John: I think flying with birds would be way cooler than flying in a plane. Imagine the wind blowing through your feathers!
-
+            
             - Yes
                 John: Yeah, that’d be amazing. I’ve always wanted to try skydiving. I wonder if it’s anything like that.
             - No
@@ -71,16 +71,16 @@ John: Is it… something with animals?
 
 - No
     John: Hmm, do you work with machines?
-
+    
     - Yes
         John: Ok, I’m getting there! Are you a car person?
-
+        
         - Yes
             John: Right on! Are you like a mechanic?
-
+            
             - Yes
                 John: Interesting! Do you have a favorite kind of car to work on?
-
+                
                 - Yes
                     John: Oh yeah? That’s cool.
                     John: …It’s alright, you don’t have to tell me if you don’t want.
@@ -88,61 +88,61 @@ John: Is it… something with animals?
                     John: Ok, just an all-around car enjoyer. Respectable! Honest work, probably makes good money too.
             - No
                 John: Are you a race car driver? Have you won any races?
-
+                
                 - Yes
                     John: Wow, that’s awesome! I bet it’s exhilarating!
                 - No
                     John: That’s okay, I’m sure you’ll have your chance someday. It seems like fun either way.
-
+        
         - No
             John: Oh, some other kind of machine? Is it robots?
-
+            
             - Yes
                 John: Interesting! Do you think robots will ever turn evil like in the movies?
-
+                
                 - Yes
                     John: Scary! I guess your job is to make sure that doesn’t happen?
-
+                    
                     - Yes
                         John: Good to know people like you exist. I wouldn’t want the Terminator showing up at my door!
                     - No
                         John: Wait… you want robots to take over? That sounds bad! Can we talk about something else? I don’t like thinking about robot apocalypses.
-
+                
                 - No
                     John: Right, of course they wouldn’t. Just machines doing what we tell them. Crazy we can make stuff like that though!
-
+                    
                     - Yes
                         John: I wonder what technology will look like in 10 years. Guess we’ll find out!
                     - No
                         John: You don’t think so? I guess a lot has stayed the same, huh?
-
+            
             - No
                 John: Well, whatever it is, I’m sure it’s exciting. I’ve never really been into machines much.
-
+    
     - No
         John: Hmm, are you… an artist?
-
+        
         - Yes
             John: Fun! Art is cool! Just don’t be a filmmaker… haha, don’t answer that.
         - No
             John: A doctor?
-
+            
             - Yes
                 John: Oh really? That’s impressive! Feels good helping people. Don’t order the apple cider though! Haha.
             - No
                 John: A chef?
-
+                
                 - Yes
                     John: I bet your food is amazing! Why aren’t you in the kitchen right now?
                     John: Just kidding! The food here is already great.
                 - No
                     John: Not a psychologist either?
-
+                    
                     - Yes
                         John: Psychologists freak me out. Always feel like they can read my mind! Quick, guess a number I’m thinking of! Haha.
                     - No
                         John: Okay, well… you do have a job, right?
-
+                        
                         - Yes
                             John: Good, had me worried there! You don’t have to say what it is though.
                         - No
@@ -153,7 +153,7 @@ John: Anyway! Aren’t you going to ask me what I do?
 - Yes
     John: Honestly, it’s not that interesting. Just numbers and spreadsheets. I’d say I’m pretty good at it—you might say I Excel at it! Hehe.
     John: In fact, I’m up for a promotion! Think I’ll get it?
-
+    
     - Yes
         John: Thanks! Feeling good about it. That would be a big step up for me.
     - No

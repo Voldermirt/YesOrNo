@@ -19,19 +19,19 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+GameManager="*uid://cfsrm25i5auag"
 
 [dialogic]
 
 directories/dch_directory={
 "Jake": "res://assets/dialogue/Jake.dch",
 "John": "res://assets/dialogue/John.dch",
-"Waiter": "res://Waiter.dch"
+"Waiter": "res://assets/dialogue/Waiter.dch"
 }
 directories/dtl_directory={
 "Dialogue": "res://assets/dialogue/Dialogue.dtl",
-"Dialogue Intro": "res://Dialogue Intro.dtl",
-"Dialogue Waiter": "res://Dialogue Waiter.dtl",
-"Dialogue Waiter 2": "res://Dialogue Waiter 2.dtl"
+"dialogue 1": "res://dialogue_1.dtl",
+"dialogue 2": "res://diaogue_2.dtl"
 }
 layout/style_directory={
 "": "res://Test.tres",

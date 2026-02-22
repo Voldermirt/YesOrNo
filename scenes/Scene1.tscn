@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cb0jfnpdq22mq"]
+
+[ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://testdialogue.gd" id="1_udng6"]
+[ext_resource type="Texture2D" uid="uid://jwp1tu6xwjbs" path="res://assets/art/Restaurant_A.png" id="2_5dv5l"]
+[ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_fw15f"]
+[ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/no_sound1.mp3" id="4_agnij"]
+[ext_resource type="AudioStream" uid="uid://3t3vwhkycovx" path="res://assets/sound/yes_sound1.wav" id="5_d2pwn"]
+
+[node name="game_scene_1" type="Node2D" unique_id=1509397216]
+script = ExtResource("1_udng6")
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=31236547]
+
+[node name="background" type="TextureRect" parent="GUI" unique_id=1158661544]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_5dv5l")
+expand_mode = 1
+
+[node name="notification" type="Control" parent="GUI" unique_id=1703773079]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_fw15f")
+
+[node name="Panel" type="Panel" parent="GUI/notification" unique_id=510001045]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 54.0
+
+[node name="notification text" type="Label" parent="GUI/notification/Panel" unique_id=442212856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -11.5
+offset_right = 99.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "[Insert Name] liked that..."
+
+[node name="NoSounds" type="AudioStreamPlayer" parent="." unique_id=616751359]
+stream = ExtResource("4_agnij")
+
+[node name="YesSounds" type="AudioStreamPlayer" parent="." unique_id=788282930]
+stream = ExtResource("5_d2pwn")
