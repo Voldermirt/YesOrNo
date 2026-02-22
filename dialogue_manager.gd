@@ -23,21 +23,40 @@ func _ready():
 	randomize()
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	
-	yes_clips = [
-		preload("res://assets/sound/yes_sound1.wav"),
-		preload("res://assets/sound/yes_sound2.wav"),
-		preload("res://assets/sound/yes_sound3.wav")		
-	]
+	#yes_clips = [
+		#preload("res://assets/sound/yes_sound1.wav"),
+		#preload("res://assets/sound/yes_sound2.wav"),
+		#preload("res://assets/sound/yes_sound3.wav")		
+	#]
+	#
+	#no_clips = [
+		#preload("res://assets/sound/no_sound1.mp3"),
+		#preload("res://assets/sound/no_sound2.wav"),
+		#preload("res://assets/sound/no_sound3.wav"),
+		#preload("res://assets/sound/no_sound4.mp3"),
+		#preload("res://assets/sound/no_sound5.mp3"),
+		#preload("res://assets/sound/no_sound6.mp3"),
+		#preload("res://assets/sound/no_sound7.mp3")		
+	#]
 	
-	no_clips = [
-		preload("res://assets/sound/no_sound1.mp3"),
-		preload("res://assets/sound/no_sound2.wav"),
-		preload("res://assets/sound/no_sound3.wav"),
-		preload("res://assets/sound/no_sound4.mp3"),
-		preload("res://assets/sound/no_sound5.mp3"),
-		preload("res://assets/sound/no_sound6.mp3"),
-		preload("res://assets/sound/no_sound7.mp3")		
-	]
+	var folder = ["elliot"].pick_random()
+	match folder:
+		"elliot":
+			yes_clips = [
+				preload("res://assets/sound/elliot/yes1.wav"),
+				preload("res://assets/sound/elliot/yes2.wav"),
+				preload("res://assets/sound/elliot/yes3.wav"),
+				preload("res://assets/sound/elliot/yes4.wav"),
+				preload("res://assets/sound/elliot/yes5.wav"),
+			]
+			no_clips = [
+				preload("res://assets/sound/elliot/no1.wav"),
+				preload("res://assets/sound/elliot/no2.wav"),
+				preload("res://assets/sound/elliot/no3.wav"),
+				preload("res://assets/sound/elliot/no4.wav"),
+				preload("res://assets/sound/elliot/no5.wav"),
+			]
+	
 		
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	timeline_name = 'get name'
@@ -52,8 +71,10 @@ func _play_yes() -> void:
 		await get_tree().create_timer(length + pause).timeout
 		
 
-func _play_stream(player: AudioStreamPlayer, stream: AudioStream, await_finish: bool=false) -> void:
+func _play_stream(player: AudioStreamPlayer, stream: AudioStream, await_finish: bool=false, randomize_pitch : bool = false) -> void:
 	player.stream = stream
+	if randomize_pitch:
+		player.pitch_scale = randf_range(0.92, 1.08)
 	player.play()
 	if await_finish:
 		await player.finished
@@ -62,9 +83,9 @@ func _play_stream(player: AudioStreamPlayer, stream: AudioStream, await_finish: 
 func _on_dialogic_signal(argument: String) -> void:
 	match argument:
 		"choice_yes":
-			_play_stream(yes_player, yes_clips.pick_random())
+			_play_stream(yes_player, yes_clips.pick_random(), true, true)
 		"choice_no":
-			_play_stream(no_player, no_clips.pick_random())
+			_play_stream(no_player, no_clips.pick_random(), true, true)
 		"name change yes":
 			if name_count < MAX_NAME_COUNT:
 				name_pronounce.append(PRONOUNCE_YES)
@@ -84,9 +105,9 @@ func _process(delta: float) -> void:
 func _say_name() -> void:
 	for e in name_pronounce:
 		if e == PRONOUNCE_YES:
-			_play_stream(yes_player, yes_clips.pick_random(), true)
+			await _play_stream(yes_player, yes_clips.pick_random(), true, true)
 		elif e == PRONOUNCE_NO:
-			_play_stream(no_player, no_clips.pick_random(), true)
+			await _play_stream(no_player, no_clips.pick_random(), true, true)
 	
 func _update_name_display(change: String) -> void:
 	if name_count < MAX_NAME_COUNT:
