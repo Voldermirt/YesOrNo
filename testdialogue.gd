@@ -90,9 +90,12 @@ func _update_name_display(change: String):
 func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
+		Dialogic.start("dialogue oh no")
+		timeline_name = 'dialogue oh no'
+		playername.visible = false
+	elif timeline_name == 'dialogue oh no':
 		Dialogic.start("dialogue 1")
 		timeline_name = 'dialogue 1'
-		playername.visible = false
 	elif timeline_name == 'dialogue 1':
 		Dialogic.start("dialogue waiter 2")
 		timeline_name = 'dialogue waiter 2'
