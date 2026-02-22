@@ -1,0 +1,75 @@
+join Waiter left
+Waiter: Bonjour, are you two ready to order?
+- Yes
+	Waiter: Excellent. What are we feeling today?
+	John: I’ll have the Fettuccine Alfredo, please.
+	Waiter: Great choice. And for you?
+	- Yes
+		label ONE
+		Waiter: Yes, what will you be having?
+		- Yes
+			label FOUR
+			Waiter: Would you like to hear the specials?
+			- Yes
+				Waiter: We have the risotto…
+				- Yes
+					Waiter: Great, I’ll be back soon with some risotto and fettuccine alfredo.
+					leave Waiter
+				- No
+					Waiter: …salmon ravioli…
+					- Yes
+						Waiter: Great, I’ll be back soon with that ravioli and the fettuccine alfredo.
+						leave Waiter
+					- No
+						Waiter: …and the chicken parmesan.
+						- Yes
+							Waiter: Excellent, I’ll be back soon with that chicken parmesan and the fettuccine alfredo.
+							leave Waiter
+						- No
+							jump THREE
+			- No
+				label THREE
+				Waiter: Alright, well what would you like?
+				- Yes
+					jump No1
+				- No
+					label No1
+					Waiter: I’m afraid I don’t understand.
+					John: Sorry, they’ll just have the lasagna.
+					Waiter: ...Very well. I’ll be back shortly with that lasagna and the fettuccine alfredo.
+					leave Waiter
+					John: (What are you doing??)
+		- No
+			Waiter: Pardon?
+			- Yes
+				jump FOUR
+			- No
+				jump FIVE
+	- No
+		Waiter: Pardon?
+		- Yes
+			jump ONE
+		- No
+			label FIVE
+			Waiter: Nothing for you? … As you wish.
+			Waiter: I’ll be back soon with that fettuccine alfredo.
+			leave Waiter
+			John: You’re not eating anything?
+			- Yes
+				label TWO
+				John: Alright, suit yourself.
+				John: (Then why did you suggest we go to a restaurant?)
+			- No
+				John: We can get some breadsticks for the table…?
+				- Yes
+					John: A-alright then? Waiter!
+					join Waiter center
+					Waiter: You called?
+					John: Hi, could we also get some breadsticks for the table please?
+					Waiter: Of course.
+					leave Waiter
+				- No
+					jump TWO
+- No
+	Waiter: I’ll give you another moment, then.
+	leave Waiter
