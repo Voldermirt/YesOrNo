@@ -16,21 +16,40 @@ func _ready():
 	randomize()
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	
-	yes_clips = [
-		preload("res://assets/sound/yes_sound1.wav"),
-		preload("res://assets/sound/yes_sound2.wav"),
-		preload("res://assets/sound/yes_sound3.wav")		
-	]
+	#yes_clips = [
+		#preload("res://assets/sound/yes_sound1.wav"),
+		#preload("res://assets/sound/yes_sound2.wav"),
+		#preload("res://assets/sound/yes_sound3.wav")		
+	#]
+	#
+	#no_clips = [
+		#preload("res://assets/sound/no_sound1.mp3"),
+		#preload("res://assets/sound/no_sound2.wav"),
+		#preload("res://assets/sound/no_sound3.wav"),
+		#preload("res://assets/sound/no_sound4.mp3"),
+		#preload("res://assets/sound/no_sound5.mp3"),
+		#preload("res://assets/sound/no_sound6.mp3"),
+		#preload("res://assets/sound/no_sound7.mp3")		
+	#]
 	
-	no_clips = [
-		preload("res://assets/sound/no_sound1.mp3"),
-		preload("res://assets/sound/no_sound2.wav"),
-		preload("res://assets/sound/no_sound3.wav"),
-		preload("res://assets/sound/no_sound4.mp3"),
-		preload("res://assets/sound/no_sound5.mp3"),
-		preload("res://assets/sound/no_sound6.mp3"),
-		preload("res://assets/sound/no_sound7.mp3")		
-	]
+	var folder = ["elliot"].pick_random()
+	match folder:
+		"elliot":
+			yes_clips = [
+				preload("res://assets/sound/elliot/yes1.wav"),
+				preload("res://assets/sound/elliot/yes2.wav"),
+				preload("res://assets/sound/elliot/yes3.wav"),
+				preload("res://assets/sound/elliot/yes4.wav"),
+				preload("res://assets/sound/elliot/yes5.wav"),
+			]
+			no_clips = [
+				preload("res://assets/sound/elliot/no1.wav"),
+				preload("res://assets/sound/elliot/no2.wav"),
+				preload("res://assets/sound/elliot/no3.wav"),
+				preload("res://assets/sound/elliot/no4.wav"),
+				preload("res://assets/sound/elliot/no5.wav"),
+			]
+	
 		
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	timeline_name = 'get name'
@@ -47,6 +66,7 @@ func _play_yes() -> void:
 func _on_dialogic_signal(argument):
 	if argument == "choice_yes":
 		yes_player.stream = yes_clips.pick_random()
+		yes_player.pitch_scale = randf_range(0.92, 1.08)
 		yes_player.play()
 		#if not play_yes:
 			#play_yes = true
