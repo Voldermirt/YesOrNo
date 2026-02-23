@@ -1,13 +1,18 @@
-join John center [animation="Slide From Right"]
-John: I don't work a second date
-[signal arg="choice_no"]
-join Waiter center  [animation="Slide From Left"]
-Waiter: I don't like you either
-leave Waiter [animation="Slide To Left"]
-John: I still had fun though
-leave John [animation="Slide To Right"]
-join bingus left [animation="Fade In"]
-bingus: Hey
-bingus: Can't help overhear that you're single
-bingus: Would you mind...
-bingus: buying me a beer sometime...
+join John center
+update John (date)
+John: Hey so thanks for the date, but I don't think this is gonna work out.
+John: I'm just not really feeling it.
+update John (mad)
+John: Plus, I feel like you could do with introducing a little nuance into your lexicon.
+John: You know, "only a Sith deals in absolutes". An occasional "maybe" couldn't hurt.
+John: Or, even better, something beyond a single word!
+update John (sad)
+John: Well, at least the food was good.
+Jogn: Good night.
+- Yes
+	[signal arg="choice_yes"]
+	John: Uh huh.
+- No
+	[signal arg="choice_no"]
+	update John (mad)
+	John: Well that's just uncalled for.

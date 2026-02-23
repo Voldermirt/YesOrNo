@@ -182,7 +182,8 @@ John: Is it… something with animals?
         
         - Yes
             [signal arg="choice_yes"]
-            John: Fun! Art is cool! Just don’t be a filmmaker… haha, don’t answer that.
+            John: Okay, now that’s fun! Art is really cool!
+            John: Though, please tell me you’re not a film person… Y’know what, don’t answer that, I don’t want to know.
         - No
             [signal arg="choice_no"]
             John: A doctor?
