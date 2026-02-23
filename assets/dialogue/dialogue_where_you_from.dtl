@@ -9,17 +9,20 @@ John: So, are you from around here?
 		John: Nice, do you like it here?
 		- Yes
 			[signal arg="choice_yes"]
+			[signal arg="John_liked"]
 			John: Me too!
 		- No
 			[signal arg="choice_no"]
+			[signal arg="John_disliked"]
 			update John (date)
-			John: Oh man, I'm sorry to hear that!
+			John: Oh man, I'm sorry to hear that.
 	- No
 		[signal arg="choice_no"]
 		John: Oh, so you’re new here? Maybe I can show you the sights sometime.
 		- Yes
 			[signal arg="choice_yes"]
 			update John (date)
+			[signal arg="John_liked"]
 			John: Well I don’t want to commit to anything just now, but it could be fun!
 		- No
 			[signal arg="choice_no"]
@@ -45,6 +48,7 @@ John: So, are you from around here?
 				John: From Canada?
 				- Yes
 					[signal arg="choice_yes"]
+					[signal arg="John_liked"]
 					John: Oh okay, that’s cool! I’ve always wanted to visit there.
 				- No
 					[signal arg="choice_no"]
@@ -54,6 +58,7 @@ John: So, are you from around here?
 						John: Oh wow. Do you really get huuuge spiders down there?
 						- Yes
 							[signal arg="choice_yes"]
+							[signal arg="John_disliked"]
 							John: Yeesh! I could never live there, I think.
 						- No
 							[signal arg="choice_no"]
@@ -72,15 +77,17 @@ John: So, are you from around here?
 					John: Ok, well that's not like *that* far, I guess.
 				- No
 					[signal arg="choice_no"]
-					Johm: Colombia?
+					John: Colombia?
 					- Sí
 						[signal arg="choice_yes"]
 						John: Oh interesting! What's it like there?
 						- Sí
 							[signal arg="choice_yes"]
+							[signal arg="John_liked"]
 							John: Right on.
 						- No
 							[signal arg="choice_no"]
+							[signal arg="John_disliked"]
 							John: Oh okay. Sorry for asking.
 					- No
 						[signal arg="choice_no"]
@@ -100,6 +107,7 @@ John: So, are you from around here?
 					John: Are you from France?
 					- Oui
 						[signal arg="choice_yes"]
+						[signal arg="John_disliked"]
 						John: Oh, yikes. I'm sorry, I'm just not sure I want to date a French person.
 						[signal arg="french"]
 					- Non
@@ -107,12 +115,14 @@ John: So, are you from around here?
 						John: Canada?
 						- Oui
 							[signal arg="choice_yes"]
+							[signal arg="John_liked"]
 							John: Oh, so you're like Wolverine!
 						- Non
 							[signal arg="choice_no"]
 							John: Belgium?
 							- Oui
 								[signal arg="choice_yes"]
+								[signal arg="John_liked"]
 								John: Y'all, uh, make good waffles.
 							- Non
 								[signal arg="choice_no"]
@@ -137,4 +147,5 @@ John: So, are you from around here?
 				John: Huh? Sorry, it's still kinda loud in here. Anyway!
 		- No
 			[signal arg="choice_no"]
+			[signal arg="John_disliked"]
 			John: What? Oh, sorry for asking, I guess. You don't have to answer that.

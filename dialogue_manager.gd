@@ -105,6 +105,9 @@ func _on_dialogic_signal(argument: String) -> void:
 		"inquisition":
 			$SpanishInquisitionSound.play()
 			await $SpanishInquisitionSound.finished
+		"John_liked":
+			GameManager.likeness += 1
+			
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -158,7 +161,7 @@ func _on_timeline_ended() -> void:
 		Dialogic.start("dialogue waiter 2")
 		timeline_name = 'dialogue waiter 2'
 	elif timeline_name == 'dialogue waiter 2':
-		if (GameManager.likeness > 1):
+		if (GameManager.likeness > 4):
 			good_bg.visible = true
 			interior.visible = false
 			Dialogic.start("dialogue like")

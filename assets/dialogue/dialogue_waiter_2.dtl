@@ -19,6 +19,7 @@ Waiter: Bonjour, are you two ready to order?
 				Waiter: We have the risotto…
 				- Yes
 					[signal arg="choice_yes"]
+					[signal arg="John_liked"]
 					Waiter: Great, I’ll be back soon with some risotto and fettuccine alfredo.
 					leave Waiter [animation="Slide To Left"]
 				- No
@@ -26,6 +27,7 @@ Waiter: Bonjour, are you two ready to order?
 					Waiter: …salmon ravioli…
 					- Yes
 						[signal arg="choice_yes"]
+						[signal arg="John_liked"]
 						Waiter: Great, I’ll be back soon with that ravioli and the fettuccine alfredo.
 						leave Waiter [animation="Slide To Left"]
 					- No
@@ -33,6 +35,7 @@ Waiter: Bonjour, are you two ready to order?
 						Waiter: …and the chicken parmesan.
 						- Yes
 							[signal arg="choice_yes"]
+							[signal arg="John_liked"]
 							Waiter: Excellent, I’ll be back soon with that chicken parmesan and the fettuccine alfredo.
 							leave Waiter [animation="Slide To Left"]
 						- No
@@ -50,6 +53,7 @@ Waiter: Bonjour, are you two ready to order?
 					label No1
 					Waiter: I’m afraid I don’t understand.
 					John: Sorry, they’ll just have the lasagna.
+					[signal arg="John_disliked"]
 					Waiter: ...Very well. I’ll be back shortly with that lasagna and the fettuccine alfredo.
 					leave Waiter [animation="Slide To Left"]
 					John: (What are you doing??)
@@ -78,6 +82,7 @@ Waiter: Bonjour, are you two ready to order?
 			- Yes
 				[signal arg="choice_yes"]
 				label TWO
+				[signal arg="John_disliked"]
 				John: Alright, suit yourself.
 				John: (Then why did you suggest we go to a restaurant?)
 			- No
@@ -90,6 +95,7 @@ Waiter: Bonjour, are you two ready to order?
 					Waiter: You called?
 					John: Hi, could we also get some breadsticks for the table please?
 					Waiter: Of course.
+					[signal arg="John_disliked"]
 					leave Waiter
 				- No
 					[signal arg="choice_no"]
@@ -97,4 +103,5 @@ Waiter: Bonjour, are you two ready to order?
 - No
 	[signal arg="choice_no"]
 	Waiter: I’ll give you another moment, then.
+	[signal arg="John_disliked"]
 	leave Waiter

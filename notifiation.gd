@@ -29,15 +29,19 @@ func _on_dialogic_signal(argument):
 			fade_tween = null
 			
 	if argument == "John_liked":
-		text.text = "John liked that..."
+		text.text = "Your date liked that..."
 		fade_out(self, 3.0)
 		print("way")
 		GameManager.likeness += 1
 	elif argument == "John_disliked":
-		text.text = "John disliked that..."
+		text.text = "Your date disliked that..."
 		fade_out(self, 3.0)
 		print("no way")
 		GameManager.likeness -= 1
+	elif argument == "inquisition":
+		text.text = "Nobody expects the Spanish Inquisition!"
+		fade_out(self, 3.0)
+		print("inquisition")
 
 func fade_out(node_to_fade: CanvasItem, duration: float = 1.0) -> void:
 	fade_tween = create_tween()

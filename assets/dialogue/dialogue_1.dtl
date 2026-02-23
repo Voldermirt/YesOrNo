@@ -7,12 +7,10 @@ John: Hey there, it’s great to meet you! So what’s your name?
 
 - Yes
     [signal arg="choice_yes"]
-    [signal arg="John_liked"]
     update John (nervous) [animation="Tada" length="2.0"]
     John: I didn’t quite catch that, did you say Jess? Hi Jess!
 - No
     [signal arg="choice_no"]
-    [signal arg="John_disliked"]
     John: What was that? Noah? Sorry, it’s a little loud in here. Good to meet you, Noah!
 
 update John (date)
@@ -36,6 +34,7 @@ John: Is it… something with animals?
             
             - Yes
                 [signal arg="choice_yes"]
+                [signal arg="John_liked"]
                 John: Yeah, horses are pretty cool! I used to have one when I was a kid.
             - No
                 [signal arg="choice_no"]
@@ -48,9 +47,11 @@ John: Is it… something with animals?
             
             - Yes
                 [signal arg="choice_yes"]
+                [signal arg="John_liked"]
                 John: Thanks! I was pretty proud of that one.
             - No
                 [signal arg="choice_no"]
+                [signal arg="John_disliked"]
                 John: Well… okay, that’s a little rude, isn’t it?
         
         John: Anyways!
@@ -64,6 +65,7 @@ John: Is it… something with animals?
         
         - Yes
             [signal arg="choice_yes"]
+            [signal arg="John_liked"]
             John: Really? That’s awesome! Do you, like, get to ride them and fly around?
             
             - Yes
@@ -129,7 +131,7 @@ John: Is it… something with animals?
                 - Yes
                     [signal arg="choice_yes"]
                     John: Oh yeah? That’s cool.
-                    John: …It’s alright, you don’t have to tell me if you don’t want.
+                    John: …It’s alright, you don’t have to tell me what it is if you don’t want.
                 - No
                     [signal arg="choice_no"]
                     John: Ok, just an all-around car enjoyer. Respectable! Honest work, probably makes good money too.
@@ -139,6 +141,7 @@ John: Is it… something with animals?
                 
                 - Yes
                     [signal arg="choice_yes"]
+                    [signal arg="John_liked"]
                     John: Wow, that’s awesome! I bet it’s exhilarating!
                 - No
                     [signal arg="choice_no"]
@@ -158,9 +161,11 @@ John: Is it… something with animals?
                     
                     - Yes
                         [signal arg="choice_yes"]
+                        [signal arg="John_liked"]
                         John: Good to know people like you exist. I wouldn’t want the Terminator showing up at my door!
                     - No
                         [signal arg="choice_no"]
+                        [signal arg="John_disliked"]
                         John: Wait… you want robots to take over? That sounds bad! Can we talk about something else? I don’t like thinking about robot apocalypses.
                 
                 - No
@@ -169,6 +174,7 @@ John: Is it… something with animals?
                     
                     - Yes
                         [signal arg="choice_yes"]
+                        [signal arg="John_liked"]
                         John: I wonder what technology will look like in 10 years. Guess we’ll find out!
                     - No
                         [signal arg="choice_no"]
@@ -184,6 +190,7 @@ John: Is it… something with animals?
         
         - Yes
             [signal arg="choice_yes"]
+            [signal arg="John_liked"]
             John: Okay, now that’s fun! Art is really cool!
             John: Though, please tell me you’re not a film person… Y’know what, don’t answer that, I don’t want to know.
         - No
@@ -207,9 +214,11 @@ John: Is it… something with animals?
                     
                     - Yes
                         [signal arg="choice_yes"]
+                        [signal arg="John_disliked"]
                         John: Psychologists freak me out. Always feel like they can read my mind! Quick, guess a number I’m thinking of! Haha.
                     - No
                         [signal arg="choice_no"]
+                        [signal arg="John_disliked"]
                         John: Okay, well… you do have a job, right?
                         
                         - Yes
@@ -217,6 +226,7 @@ John: Is it… something with animals?
                             John: Good, had me worried there! You don’t have to say what it is though.
                         - No
                             [signal arg="choice_no"]
+                            [signal arg="John_disliked"]
                             John: Oh! That’s fine. Finding work can be tough. I hope you’re not expecting me to pay for everything…!
 
 John: Anyway! Aren’t you going to ask me what I do?
@@ -224,15 +234,17 @@ John: Anyway! Aren’t you going to ask me what I do?
 - Yes
     [signal arg="choice_yes"]
     John: Honestly, it’s not that interesting. Just numbers and spreadsheets. I’d say I’m pretty good at it—you might say I Excel at it! Hehe.
-    John: In fact, I’m up for a promotion! Think I’ll get it?
+    John: In fact, I’m up for a promotion! Do you think I’ll get it?
     
     - Yes
         [signal arg="choice_yes"]
-        John: Thanks! Feeling good about it. That would be a big step up for me.
+        [signal arg="John_liked"]
+        John: Thanks! I'm feeling good about it. That would be a big step up for me.
     - No
         [signal arg="choice_no"]
+        [signal arg="John_disliked"]
         John: Well… thanks for the vote of confidence, I guess.
 - No
     [signal arg="choice_no"]
+    [signal arg="John_disliked"]
     John: Oh… okay then. Moving on.
-set

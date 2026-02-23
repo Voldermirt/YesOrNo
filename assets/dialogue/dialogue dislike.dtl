@@ -1,12 +1,12 @@
-join John center
-update John (date)
+# #join John center
+# #update John (date)
 John: Hey so thanks for the date, but I don't think this is gonna work out.
 John: I'm just not really feeling it.
-update John (mad)
+# #update John (mad)
 John: Plus, I feel like you could do with introducing a little nuance into your lexicon.
 John: You know, "only a Sith deals in absolutes". An occasional "maybe" couldn't hurt.
 John: Or, even better, something beyond a single word!
-update John (sad)
+# #update John (sad)
 John: Well, at least the food was good.
 Jogn: Good night.
 - Yes
@@ -14,5 +14,6 @@ Jogn: Good night.
 	John: Uh huh.
 - No
 	[signal arg="choice_no"]
-	update John (mad)
+	# #update John (mad)
+	[signal arg="John_disliked"]
 	John: Well that's just uncalled for.

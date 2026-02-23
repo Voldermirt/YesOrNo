@@ -1,17 +1,18 @@
-join John center
-update John (happy)
+#join John center
+#update John (happy)
 John: Y'know, you are a bit of an odd person. But who doesn't have quirks!
 John: Anyway, I've had fun tonight. I feel like you get me.
-update John (nervous)
+#update John (nervous)
 John: Maybe we can do it again sometime?
 - Yes
 	[signal arg="choice_yes"]
-	update John (happy)
+	[signal arg="John_liked"]
+	#update John (happy)
 	John: Great, I'm looking forward to it!
 	John: Have a good night! See you later.
 - No
 	[signal arg="choice_no"]
-	update John (sad)
+	#update John (sad)
 	John: Oh, well that's too bad. But hey that's alright!
-	Johm: Have a good night, okay?
+	John: Have a good night, okay?
 	John: (Where did I go wrong? Was it all my questions?)
