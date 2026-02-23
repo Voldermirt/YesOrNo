@@ -29,7 +29,7 @@ func _ready():
 		#preload("res://assets/sound/yes_sound3.wav")		
 	#]
 	#
-	#no_clips = [
+	#nof_clips = [
 		#preload("res://assets/sound/no_sound1.mp3"),
 		#preload("res://assets/sound/no_sound2.wav"),
 		#preload("res://assets/sound/no_sound3.wav"),
@@ -125,7 +125,7 @@ func _on_timeline_ended() -> void:
 		_say_name()
 		var n = randi() % 200
 		if (n < 195):
-			Dialogic.start("dialogue waiter 2")
+			Dialogic.start("dialogue 1")
 			timeline_name = 'dialogue 1'
 		else:
 			Dialogic.start("dialogue oh no")
