@@ -12,7 +12,7 @@
 },
 &"default_portrait": "date",
 &"description": "",
-&"display_name": "Johny",
+&"display_name": "Date",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(-20, 0),

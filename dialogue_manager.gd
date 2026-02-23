@@ -96,6 +96,11 @@ func _on_dialogic_signal(argument: String) -> void:
 				_update_name_display("no")
 		"oh_no":
 			_play_stream(yes_player, oh_no)
+		"french":
+			get_tree().quit()
+		"inquisition":
+			$SpanishInquisitionSound.play()
+			await $SpanishInquisitionSound.finished
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -124,7 +129,7 @@ func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
 		var n = randi() % 200
-		if (n < 195):
+		if (n < 1):
 			Dialogic.start("dialogue 1")
 			timeline_name = 'dialogue 1'
 		else:

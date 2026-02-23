@@ -1,7 +1,7 @@
 join John center [animation="Slide From Right"]
 [signal arg="John_liked"]
 update John [animation="Tada" length="2.0"]
-John: How's it hanging, my person?
+#John: How's it hanging, my person?
 update John (happy)
 John: Hey there, it’s great to meet you! So what’s your name?
 
@@ -53,7 +53,7 @@ John: Is it… something with animals?
         
         John: Anyways!
         update John (date)
-        John: Really? That’s awesome! Sounds like a lot of fun.
+        
     
     - No
         [signal arg="choice_no"]
@@ -67,7 +67,6 @@ John: Is it… something with animals?
             - Yes
                 [signal arg="choice_yes"]
                 John: Haha, just kidding! That’s pretty cool though. Are you allowed to bring people with you?
-                
                 - Yes
                     [signal arg="choice_yes"]
                     John: Really? That sounds like a lot of fun!
@@ -171,7 +170,7 @@ John: Is it… something with animals?
                         John: I wonder what technology will look like in 10 years. Guess we’ll find out!
                     - No
                         [signal arg="choice_no"]
-                        John: You don’t think so? I guess a lot has stayed the same, huh?
+                        John: You don’t think so? I suppose that for how much things have changed, a whole lot really has just stayed the same, huh?
             
             - No
                 [signal arg="choice_no"]
