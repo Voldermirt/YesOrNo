@@ -12,19 +12,23 @@ John: So, are you from around here?
 			John: Me too!
 		- No
 			[signal arg="choice_no"]
+			update John (date)
 			John: Oh man, I'm sorry to hear that!
 	- No
 		[signal arg="choice_no"]
 		John: Oh, so you’re new here? Maybe I can show you the sights sometime.
 		- Yes
 			[signal arg="choice_yes"]
+			update John (date)
 			John: Well I don’t want to commit to anything just now, but it could be fun!
 		- No
 			[signal arg="choice_no"]
+			update John (date)
 			John: Okay, well I just figured I’d float the idea.
 
 - No
 	[signal arg="choice_no"]
+	update John (date)
 	John: Oh, are you from very far away?
 	- Yes
 		[signal arg="choice_yes"]
@@ -83,8 +87,8 @@ John: So, are you from around here?
 						John: Spain?
 						- Sí
 							[signal arg="choice_yes"]
+							[signal arg="inquisition"]
 							John: NOBODY EXPECTS THE SPANISH INQUISITION!!!
-							# TODO: Spanish Inquisition
 						- No
 							[signal arg="choice_no"]
 							John: Hmm, I'm not sure then!
@@ -97,7 +101,7 @@ John: So, are you from around here?
 					- Oui
 						[signal arg="choice_yes"]
 						John: Oh, yikes. I'm sorry, I'm just not sure I want to date a French person.
-						# TODO: Game Over
+						[signal arg="french"]
 					- Non
 						[signal arg="choice_no"]
 						John: Canada?

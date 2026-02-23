@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c7b2feuwjdhim" path="res://assets/art/platesgamejam.png" id="5_agnij"]
 [ext_resource type="AudioStream" uid="uid://3t3vwhkycovx" path="res://assets/sound/yes_sound1.wav" id="5_d2pwn"]
 [ext_resource type="Texture2D" uid="uid://8tjqx0sqcgjl" path="res://assets/art/handsgamejam.png" id="6_d2pwn"]
+[ext_resource type="AudioStream" uid="uid://d0tvtuihtsl1t" path="res://assets/sound/inquisition.mp3" id="10_x0ogb"]
 
 [node name="game_scene_1" type="Node2D" unique_id=1509397216]
 z_index = -1
@@ -143,3 +144,6 @@ stream = ExtResource("4_agnij")
 
 [node name="YesSounds" type="AudioStreamPlayer" parent="." unique_id=788282930]
 stream = ExtResource("5_d2pwn")
+
+[node name="SpanishInquisitionSound" type="AudioStreamPlayer" parent="." unique_id=1043236132]
+stream = ExtResource("10_x0ogb")
