@@ -129,16 +129,19 @@ func _on_timeline_ended() -> void:
 	if timeline_name == "get name":
 		_say_name()
 		var n = randi() % 200
-		if (n < 1):
-			Dialogic.start("dialogue 1")
-			timeline_name = 'dialogue 1'
+		if (n < 195):
+			Dialogic.start("dialogue_intro")
+			timeline_name = 'dialogue_intro'
 		else:
 			Dialogic.start("dialogue oh no")
 			timeline_name = 'dialogue oh no'
 		player_name.visible = false
 	elif timeline_name == 'dialogue oh no':
+		Dialogic.start("dialogue_intro")
+		timeline_name = 'dialogue_intro'
+	elif timeline_name == "dialogue_intro":
 		Dialogic.start("dialogue 1")
-		timeline_name = 'dialogue 1'
+		timeline_name = "dialogue 1"
 	elif timeline_name == 'dialogue 1':
 		Dialogic.start("dialogue_where_you_from")
 		timeline_name = 'dialogue_where_you_from'

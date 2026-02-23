@@ -1,0 +1,12 @@
+Narrator: That sure is a cool name. Nobody's gonna call you that though.
+Narrator: Hey, I don't make the rules.
+Narrator: Anyway, you're here at Italian Restaurant(tm) to meet your blind data. They're not actually blind. You just don't know each other. That's what a blind date is.
+Narrator: Now for some inexplicable reason, I don't care whether it's because of some dare or an ancient curse or something, you can only speak using the words "Yes" and "No."
+Narrator: If you're lucky, this limited vocabulary will be enough to woo this visually unimpaired person, and maybe you'll even have a chance at a second date.
+Narrator: That's about it- Ah, here they come. Are you ready?
+- Yes
+	[signal arg="choice_yes"]
+	Narrator: You better be. Good luck.
+- No
+	[signal arg="choice_no"]
+	Narrator: Well you should have thought of that before agreeing to this date, huh?
