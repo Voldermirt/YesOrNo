@@ -15,7 +15,7 @@
 &"display_name": "Johny",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(40, 0),
+&"offset": Vector2(-20, 0),
 &"portraits": {
 "date": {
 "export_overrides": {

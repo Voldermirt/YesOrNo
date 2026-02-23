@@ -1,4 +1,4 @@
-join Waiter left [animation="Slide From Left"]
+join Waiter center [animation="Slide From Left"]
 join John center [animation="Instant In" length="0.0"]
 Waiter: Bonjour, are you two ready to order?
 - Yes

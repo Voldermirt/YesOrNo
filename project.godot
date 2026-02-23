@@ -85,6 +85,8 @@ animations/leave_default="Fade Out"
 
 [display]
 
+window/size/viewport_width=1027
+window/size/viewport_height=795
 window/stretch/mode="canvas_items"
 
 [editor]
