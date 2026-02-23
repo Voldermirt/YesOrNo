@@ -1,3 +1,13 @@
-join John center
+join John center [animation="Slide From Right"]
 John: I don't work a second date
 [signal arg="choice_no"]
+join Waiter center  [animation="Slide From Left"]
+Waiter: I don't like you either
+leave Waiter [animation="Slide To Left"]
+John: I still had fun though
+leave John [animation="Slide To Right"]
+join bingus left [animation="Fade In"]
+bingus: Hey
+bingus: Can't help overhear that you're single
+bingus: Would you mind...
+bingus: buying me a beer sometime...
