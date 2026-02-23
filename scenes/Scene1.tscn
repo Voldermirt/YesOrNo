@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c7b2feuwjdhim" path="res://assets/art/platesgamejam.png" id="5_agnij"]
 [ext_resource type="AudioStream" uid="uid://3t3vwhkycovx" path="res://assets/sound/yes_sound1.wav" id="5_d2pwn"]
 [ext_resource type="Texture2D" uid="uid://8tjqx0sqcgjl" path="res://assets/art/handsgamejam.png" id="6_d2pwn"]
+[ext_resource type="Texture2D" uid="uid://8r6jmnc2t8ey" path="res://assets/art/goodendinggamejam.png" id="8_so5j8"]
+[ext_resource type="Texture2D" uid="uid://cn8b5exonrsru" path="res://assets/art/badendinggamejam.png" id="9_a0q6h"]
 [ext_resource type="AudioStream" uid="uid://d0tvtuihtsl1t" path="res://assets/sound/inquisition.mp3" id="10_x0ogb"]
 
 [node name="game_scene_1" type="Node2D" unique_id=1509397216]
@@ -85,6 +87,26 @@ grow_vertical = 2
 texture = ExtResource("6_d2pwn")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="goodend" type="TextureRect" parent="GUI" unique_id=1794247782]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_so5j8")
+expand_mode = 3
+
+[node name="badend" type="TextureRect" parent="GUI" unique_id=1774845218]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_a0q6h")
+expand_mode = 3
 
 [node name="notification" type="Control" parent="GUI" unique_id=1703773079]
 layout_mode = 3

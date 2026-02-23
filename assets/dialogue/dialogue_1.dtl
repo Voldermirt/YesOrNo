@@ -15,8 +15,10 @@ John: Hey there, it’s great to meet you! So what’s your name?
     [signal arg="John_disliked"]
     John: What was that? Noah? Sorry, it’s a little loud in here. Good to meet you, Noah!
 
-John: I’m [INSERT NAME HERE].
 update John (date)
+John: And you've already been told my name, haven't you?
+Narrator: Mhm. Sure you have.
+Narrator: It's probably not important.
 John: So what do you do for work? Wait, no don’t tell me—I wanna guess.
 John: Is it… something with animals?
 
