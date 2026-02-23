@@ -59,8 +59,8 @@ func _ready():
 	
 		
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	timeline_name = 'get name'
-	Dialogic.start('get name')
+	timeline_name = 'real_intro'
+	Dialogic.start('real_intro')
 
 func _play_yes() -> void:
 	while play_yes:
@@ -126,8 +126,11 @@ func _update_name_display(change: String) -> void:
 	#Dialogic.start("dialogue 1")
 
 func _on_timeline_ended() -> void:
-	if timeline_name == "get name":
-		_say_name()
+	if timeline_name == "real_intro":
+		timeline_name = 'get name'
+		Dialogic.start('get name')
+	elif timeline_name == "get name":
+		await _say_name()
 		var n = randi() % 200
 		if (n < 195):
 			Dialogic.start("dialogue_intro")
