@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cp8md24l52mjh"]
 
 [ext_resource type="Script" uid="uid://c27mg2240mjta" path="res://scenes/main_menu.gd" id="1_i26rj"]
+[ext_resource type="Texture2D" uid="uid://o2qvqn2yajid" path="res://assets/art/outsideresurant.png" id="2_ekxnf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 
 [node name="Control" type="Control" unique_id=1409844193]
 layout_mode = 3
@@ -11,8 +16,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i26rj")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=865984542]
-layout_mode = 1
+[node name="GUI" type="CanvasLayer" parent="." unique_id=1669774851]
+
+[node name="exterior" type="TextureRect" parent="GUI" unique_id=228589214]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ekxnf")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GUI" unique_id=865984542]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -21,14 +37,14 @@ offset_top = 120.0
 offset_right = 150.0
 offset_bottom = 200.0
 grow_horizontal = 2
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_font_sizes/normal_font_size = 58
 text = "Yes or No"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="." unique_id=1527095164]
-layout_mode = 1
+[node name="Panel" type="Panel" parent="GUI" unique_id=1527095164]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -40,8 +56,9 @@ offset_right = 263.5
 offset_bottom = 272.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekxnf")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel" unique_id=1350107139]
+[node name="RichTextLabel2" type="RichTextLabel" parent="GUI/Panel" unique_id=1350107139]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -57,7 +74,7 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu buttons" type="VBoxContainer" parent="Panel" unique_id=1326563988]
+[node name="menu buttons" type="VBoxContainer" parent="GUI/Panel" unique_id=1326563988]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -72,17 +89,45 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="Panel/menu buttons" unique_id=1523144783]
+[node name="Button" type="Button" parent="GUI/Panel/menu buttons" unique_id=1523144783]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "Yes"
 
-[node name="Button2" type="Button" parent="Panel/menu buttons" unique_id=1539388389]
+[node name="Button2" type="Button" parent="GUI/Panel/menu buttons" unique_id=1539388389]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "No"
 
-[connection signal="pressed" from="Panel/menu buttons/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Panel/menu buttons/Button2" to="." method="_on_quit_button_pressed"]
+[node name="Panel2" type="Panel" parent="GUI" unique_id=1093295402]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -300.0
+offset_right = 209.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bqqt6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GUI/Panel2" unique_id=602063965]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/normal_font_size = 58
+text = "Yes or No"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="GUI/Panel/menu buttons/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GUI/Panel/menu buttons/Button2" to="." method="_on_quit_button_pressed"]
