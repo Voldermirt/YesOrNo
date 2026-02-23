@@ -58,7 +58,7 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 animations/join_default_length=0.5
 animations/join_default_wait=true
-animations/leave_default_length=10.0
+animations/leave_default_length=0.5
 animations/leave_default_wait=true
 animations/cross_fade_default_length=0.5
 text/autopauses={}
@@ -81,7 +81,7 @@ variables={}
 layout/style_list=["res://assets/art/style.tres"]
 layout/default_style="res://assets/art/style.tres"
 animations/join_default="Slide From Right"
-animations/leave_default="Zoom Out"
+animations/leave_default="Fade Out"
 
 [display]
 

@@ -125,7 +125,7 @@ func _on_timeline_ended() -> void:
 		_say_name()
 		var n = randi() % 200
 		if (n < 195):
-			Dialogic.start("dialogue 1")
+			Dialogic.start("dialogue waiter 2")
 			timeline_name = 'dialogue 1'
 		else:
 			Dialogic.start("dialogue oh no")

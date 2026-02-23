@@ -38,6 +38,7 @@ texture = ExtResource("3_agnij")
 expand_mode = 3
 
 [node name="Table" type="TextureRect" parent="GUI/background" unique_id=839087547]
+z_index = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,6 +49,7 @@ texture = ExtResource("4_fw15f")
 expand_mode = 1
 
 [node name="Plates" type="TextureRect" parent="GUI/background" unique_id=128775917]
+z_index = 5
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
