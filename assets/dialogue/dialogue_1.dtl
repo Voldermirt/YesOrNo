@@ -16,6 +16,7 @@ John: Hey there, it’s great to meet you! So what’s your name?
     John: What was that? Noah? Sorry, it’s a little loud in here. Good to meet you, Noah!
 
 John: I’m [INSERT NAME HERE].
+update John (date)
 John: So what do you do for work? Wait, no don’t tell me—I wanna guess.
 John: Is it… something with animals?
 
@@ -34,9 +35,6 @@ John: Is it… something with animals?
             - Yes
                 [signal arg="choice_yes"]
                 John: Yeah, horses are pretty cool! I used to have one when I was a kid.
-                update John (nervous)
-                John: We had to get rid of it after the incident though. I’m still on a no-fly list.
-                update John (date)
             - No
                 [signal arg="choice_no"]
                 John: Oh really? Horses are neat, but honestly a little overrated. They’re a lot of work to take care of.
@@ -81,17 +79,35 @@ John: Is it… something with animals?
             - No
                 [signal arg="choice_no"]
                 John: Haha, I was just kidding. Imagine flying around though—it’d be pretty cool!
+                - Yes
+                    [signal arg="choice_yes"]
+                    update John (happy)
+                    John: I think flying with birds would be way cooler than flying in a plane. Imagine the wind blowing through your feathers!
+                    - Yes
+                        [signal arg="choice_yes"]
+                        John: Yeah, that’d be pretty cool. Y’know I’ve always kinda wanted to try skydiving. I wonder if that’s at all what birds feel like.
+                    - No
+                        [signal arg="choice_no"]
+                        John: Ah, not really the imaginative sort? That’s alright, I guess not everyone is.
+                    update John (date)
+                        
+                - No
+                    [signal arg="choice_no"]
+                    John: Really, you’ve never wondered what it feels like to fly like a bird? You seem like a grounded sort of person, I can respect that.
+                    update John (sad)
+                    - Yes
+                        [signal arg="choice_yes"]
+                        update John (date)
+                        John: Yeah, see? I think I’m pretty good at reading people.
+                    - No
+                        [signal arg="choice_no"]
+                        John: Oh, well excuse me. I didn’t mean to assume.
+                        update John (date)
         
         - No
             [signal arg="choice_no"]
-            John: I think flying with birds would be way cooler than flying in a plane. Imagine the wind blowing through your feathers!
+            John: Well darn, those are the only animals I know. I guess it’ll just remain a mystery then. An enigmatic sort, you are.
             
-            - Yes
-                [signal arg="choice_yes"]
-                John: Yeah, that’d be amazing. I’ve always wanted to try skydiving. I wonder if it’s anything like that.
-            - No
-                [signal arg="choice_no"]
-                John: Ah, not really the imaginative type? That’s alright, not everyone is.
 
 - No
     [signal arg="choice_no"]
