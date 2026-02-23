@@ -17,7 +17,6 @@ script = ExtResource("1_udng6")
 [node name="GUI" type="CanvasLayer" parent="." unique_id=31236547]
 
 [node name="background" type="TextureRect" parent="GUI" unique_id=1158661544]
-z_index = 4096
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -51,7 +50,6 @@ texture = ExtResource("4_fw15f")
 expand_mode = 1
 
 [node name="Plates" type="TextureRect" parent="GUI/background" unique_id=128775917]
-top_level = true
 visibility_layer = 2
 z_index = 4096
 z_as_relative = false
