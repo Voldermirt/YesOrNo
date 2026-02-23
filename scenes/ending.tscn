@@ -5,44 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://lg2fpkdxbox2" path="res://assets/art/chairgamejam.png" id="3_t1k4y"]
 [ext_resource type="Texture2D" uid="uid://c58es3duhrbya" path="res://assets/art/tablegamejam.png" id="4_3v48n"]
 [ext_resource type="Texture2D" uid="uid://c7b2feuwjdhim" path="res://assets/art/platesgamejam.png" id="5_75aq2"]
-[ext_resource type="Texture2D" uid="uid://6lt7giesc032" path="res://assets/art/dategamejam.png" id="6_o5uye"]
 
 [node name="Ending" type="Node2D" unique_id=1546267176]
 script = ExtResource("1_fyrdv")
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1508577837]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="GUI" unique_id=1640369786]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -150.0
-offset_top = 120.0
-offset_right = 150.0
-offset_bottom = 200.0
-grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 58
-text = "The end"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button2" type="Button" parent="GUI" unique_id=1154944375]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -40.0
-offset_right = 150.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "Quit
-"
 
 [node name="background2" type="TextureRect" parent="GUI" unique_id=1635860470]
 anchors_preset = 15
@@ -54,7 +21,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_5amew")
 expand_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Chair" type="TextureRect" parent="GUI/background2" unique_id=261198143]
 layout_mode = 1
@@ -86,16 +52,39 @@ grow_vertical = 2
 texture = ExtResource("5_75aq2")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="GUI/background2" unique_id=1271161430]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="RichTextLabel" type="RichTextLabel" parent="GUI" unique_id=1640369786]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 120.0
+offset_right = 150.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 58
+text = "The end"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="GUI" unique_id=1154944375]
+top_level = true
+z_index = 4
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -40.0
+offset_right = 150.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_o5uye")
-expand_mode = 1
-stretch_mode = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"
 
 [connection signal="pressed" from="GUI/Button2" to="." method="_on_quit_button_pressed"]

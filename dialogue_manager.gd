@@ -4,6 +4,8 @@ extends Node2D
 @onready var player_name: Control = $GUI/name
 @onready var yes_player: AudioStreamPlayer = $YesSounds
 @onready var no_player: AudioStreamPlayer = $NoSounds
+@onready var interior: TextureRect = $GUI/background
+@onready var exterior: TextureRect = $GUI/exterior
 
 const MAX_NAME_COUNT: int = 8
 const PRONOUNCE_YES := 1
@@ -135,6 +137,8 @@ func _on_timeline_ended() -> void:
 		if (n < 195):
 			Dialogic.start("dialogue_intro")
 			timeline_name = 'dialogue_intro'
+			interior.visible = true;
+			exterior.visible = false;
 		else:
 			Dialogic.start("dialogue oh no")
 			timeline_name = 'dialogue oh no'
@@ -143,6 +147,8 @@ func _on_timeline_ended() -> void:
 		Dialogic.start("dialogue_intro")
 		timeline_name = 'dialogue_intro'
 	elif timeline_name == "dialogue_intro":
+		interior.visible = true;
+		exterior.visible = false;
 		Dialogic.start("dialogue 1")
 		timeline_name = "dialogue 1"
 	elif timeline_name == 'dialogue 1':

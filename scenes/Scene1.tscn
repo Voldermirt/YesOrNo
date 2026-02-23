@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2rowbhvm8wdr" path="res://dialogue_manager.gd" id="1_udng6"]
 [ext_resource type="Texture2D" uid="uid://8cxpkhhhf4wn" path="res://assets/art/backgroundgamejam1.png" id="2_5dv5l"]
+[ext_resource type="Texture2D" uid="uid://o2qvqn2yajid" path="res://assets/art/outsideresurant.png" id="2_6eqy8"]
 [ext_resource type="Texture2D" uid="uid://lg2fpkdxbox2" path="res://assets/art/chairgamejam.png" id="3_agnij"]
 [ext_resource type="Script" uid="uid://ugr6kuulfw1h" path="res://notifiation.gd" id="3_fw15f"]
 [ext_resource type="AudioStream" uid="uid://dkhrsttvigpw2" path="res://assets/sound/no_sound1.mp3" id="4_agnij"]
@@ -17,7 +18,17 @@ script = ExtResource("1_udng6")
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=31236547]
 
+[node name="exterior" type="TextureRect" parent="GUI" unique_id=309950930]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6eqy8")
+expand_mode = 3
+
 [node name="background" type="TextureRect" parent="GUI" unique_id=1158661544]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
